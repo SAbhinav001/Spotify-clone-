@@ -23,7 +23,6 @@
   border: 1px solid #000;
   margin: 10px;
   padding: 10px;
-  overflow: scroll;
 }
 
 .card > img {
@@ -33,6 +32,14 @@
 .Restraunt-list {
   flex-wrap: wrap;
   display: flex;
+}
+
+.shimmer-card {
+  height: 200px;
+  width: 200px;
+  background-color: #d3d3d3;
+  margin: 10px;
+  padding: 10px;
 }
 
 /*# sourceMappingURL=React project.9e4c6fd2.css.map */

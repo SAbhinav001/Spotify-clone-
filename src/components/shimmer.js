@@ -1,6 +1,20 @@
 const shimmer = () => {
+     
+    const array = new Array(20);
+    array.fill("");
+
     return (
-        <h1>LOADING....</h1>
+        <div className="Restraunt-list">
+            
+        {
+            
+             array.map((e, index) => <div className='shimmer-card' key={index}></div>)
+        }
+            
+       
+                   
+                    
+        </div>
     )
 }
 
