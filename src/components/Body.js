@@ -2,22 +2,22 @@ import { RestaurantList } from "../constant";
 import RestrauntCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./shimmer";
-
-function filterData(searchInput, Restaurants) {
-  return Restaurants.filter((Restraunt) =>
-    Restraunt?.data?.name?.toLowerCase()?.includes(searchInput.toLowerCase())
-  );
-}
+import { Link } from "react-router-dom";
+import { filterData } from "../utils/helper";
+import useOnline from "../utils/useOnline"
 
 const Body = () => {
   const [filterRestaurants, setFilterRestaurants] = useState([]);
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [searchInput, setSearchInput] = useState("");
+  const isOnline =  useOnline();
 
   useEffect(() => {
     //API call withoput dependcy so it use useffect only once after render
     getRestaurant();
-  }, []);
+
+  },[]);
+  
 
   async function getRestaurant() {
     const data = await fetch(
@@ -34,6 +34,10 @@ const Body = () => {
   // if restaurnat is empty - shimmer ui
   // if rest hasa data = actual ui
   //it is by if else(ternary) in return stmt
+  // if(!isOnline){
+  //   return  <h1>OOPS! Seems like  you are OFFLINE</h1>
+  // }
+
 
   return allRestaurants.length === 0 ? (
     <Shimmer />
@@ -63,7 +67,11 @@ const Body = () => {
       <div className="Restraunt-list">
         {filterRestaurants.length ? (
           filterRestaurants.map((EachObj) => {
-            return <RestrauntCard {...EachObj.data} key={EachObj.data.id} />
+            return (
+              <Link to={"/ResMenu/" + EachObj.data.id} key={EachObj.data.id} >
+                <RestrauntCard {...EachObj.data} />
+              </Link>
+            );
           })
         ) : (
           <h1>NO reuslt</h1>

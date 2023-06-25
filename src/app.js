@@ -1,88 +1,79 @@
-import React from "react";
+import React, { lazy , Suspense} from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header.js";
 import Body from "./components/body.js";
 import Footer from "./components/Footer.js";
-import { createBrowserRouter, RouterProvider , Outlet} from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 //RouterProvider is a component
 
-import About from "./components/about.js"
-import Error from "./components/eror.js"
-import Contact from "./components/contact.js"
+import About from "./components/about.js";
+import Error from "./components/eror.js";
+import Contact from "./components/contact.js";
+import ResMenu from "./components/ResMenu.js";
+import Profile from "./components/profile.js"
+import useOnline from "./utils/useOnline"
+import Shimmer from "./components/shimmer.js"
 
 
-
-
-/*
-            -Header
-                -LOGO
-                -List item (right side)
-                -Cart
-            -Body
-                -Search BAr
-                -Res lois
-                    -Res card (lot ofit)
-                        -img
-                        -Name
-                        -Rating
-                        -Cusones
-            -Footer
-                -Links
-            */
+const InstaMart = lazy(() => import("./components/Instamart.js"))
+             
 
 const AppLayout = () => {
+
+  const isOnline =  useOnline();
+  if(!isOnline){
+    return  <h1>OOPS! Seems like  you are OFFLINE</h1>
+  }
+
   return (
     <>
       <Header />
-       {/* <Body /> */}
-       <Outlet />
+      {/* <Body /> */}
+      <Outlet />
       <Footer />
     </>
   );
 };
-
-// MORMAL ROUTE
-// const appRouter = createBrowserRouter([
-// {
-//   path:"/",
-//   element: <AppLayout />,
-//   errorElement: <Error />,
-// },
-
-// {
-//   path:"/about",
-//   element: <About />,
-// },
-
-// ]);
-
-
-// NESTED ROUTE  , if We want header and footer for every loading 
-
+ 
 const appRouter = createBrowserRouter([
-{
-  path:"/",
-  element: <AppLayout />,
-  errorElement: <Error />,
-  children : [
-    {
-      path:"/",
-      element: <Body />,
-    },
-    {
-      path:"/about",
-      element: <About />,
-    },
-    {
-      path:"/Contact",
-      element: <Contact />,
-    },
-  ]
-},
-
-
+  {
+    path: "/",
+    element: <AppLayout />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: "/",
+        element: <Body />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+        // children:[
+        //   {
+        //     path:"profile",
+        //     element:<Profile />,
+        //   }
+        // ]          to get this under about componet page use outlet insiode about comp.
+      },
+      {
+        path:"/about/profile",
+        element:<Profile />
+      },
+      {
+        path: "/Contact",
+        element: <Contact />,
+      },
+      {
+        path: "/ResMenu/:id",
+        element: <ResMenu />,
+      },
+      {
+        path:"/Instamart",
+        element: <Suspense fallback ={<Shimmer/>}><InstaMart /></Suspense>
+      }
+    ],
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<RouterProvider router={appRouter}/>);
-
+root.render(<RouterProvider router={appRouter} />);

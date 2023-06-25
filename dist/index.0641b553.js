@@ -2961,67 +2961,64 @@ var _erorJs = require("./components/eror.js");
 var _erorJsDefault = parcelHelpers.interopDefault(_erorJs);
 var _contactJs = require("./components/contact.js");
 var _contactJsDefault = parcelHelpers.interopDefault(_contactJs);
-/*
-            -Header
-                -LOGO
-                -List item (right side)
-                -Cart
-            -Body
-                -Search BAr
-                -Res lois
-                    -Res card (lot ofit)
-                        -img
-                        -Name
-                        -Rating
-                        -Cusones
-            -Footer
-                -Links
-            */ const AppLayout = ()=>{
+var _resMenuJs = require("./components/ResMenu.js");
+var _resMenuJsDefault = parcelHelpers.interopDefault(_resMenuJs);
+var _profileJs = require("./components/profile.js");
+var _profileJsDefault = parcelHelpers.interopDefault(_profileJs);
+var _useOnline = require("./utils/useOnline");
+var _useOnlineDefault = parcelHelpers.interopDefault(_useOnline);
+var _shimmerJs = require("./components/shimmer.js");
+var _shimmerJsDefault = parcelHelpers.interopDefault(_shimmerJs);
+var _s = $RefreshSig$();
+const InstaMart = /*#__PURE__*/ (0, _react.lazy)(()=>require("b162e82d332fbfaa"));
+_c = InstaMart;
+const AppLayout = ()=>{
+    _s();
+    const isOnline = (0, _useOnlineDefault.default)();
+    if (!isOnline) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "OOPS! Seems like  you are OFFLINE"
+    }, void 0, false, {
+        fileName: "src/app.js",
+        lineNumber: 20,
+        columnNumber: 12
+    }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerJsDefault.default), {}, void 0, false, {
                 fileName: "src/app.js",
-                lineNumber: 32,
+                lineNumber: 23,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                 fileName: "src/app.js",
-                lineNumber: 34,
-                columnNumber: 8
+                lineNumber: 25,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerJsDefault.default), {}, void 0, false, {
                 fileName: "src/app.js",
-                lineNumber: 35,
+                lineNumber: 26,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
 };
-_c = AppLayout;
-// MORMAL ROUTE
-// const appRouter = createBrowserRouter([
-// {
-//   path:"/",
-//   element: <AppLayout />,
-//   errorElement: <Error />,
-// },
-// {
-//   path:"/about",
-//   element: <About />,
-// },
-// ]);
-// NESTED ROUTE  , if We want header and footer for every loading 
+_s(AppLayout, "XQZuNqwLTT5c423yVrgGXkXVqoc=", false, function() {
+    return [
+        (0, _useOnlineDefault.default)
+    ];
+});
+_c1 = AppLayout;
 const appRouter = (0, _reactRouterDom.createBrowserRouter)([
     {
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
             fileName: "src/app.js",
-            lineNumber: 58,
+            lineNumber: 31,
             columnNumber: 12
         }, undefined),
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _erorJsDefault.default), {}, void 0, false, {
             fileName: "src/app.js",
-            lineNumber: 59,
+            lineNumber: 32,
             columnNumber: 17
         }, undefined),
         children: [
@@ -3029,7 +3026,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyJsDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 62,
+                    lineNumber: 35,
                     columnNumber: 14
                 }, undefined)
             },
@@ -3037,7 +3034,15 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/about",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutJsDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 65,
+                    lineNumber: 38,
+                    columnNumber: 14
+                }, undefined)
+            },
+            {
+                path: "/about/profile",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileJsDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 47,
                     columnNumber: 14
                 }, undefined)
             },
@@ -3045,7 +3050,30 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/Contact",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactJsDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 68,
+                    lineNumber: 50,
+                    columnNumber: 14
+                }, undefined)
+            },
+            {
+                path: "/ResMenu/:id",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resMenuJsDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 53,
+                    columnNumber: 14
+                }, undefined)
+            },
+            {
+                path: "/Instamart",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react.Suspense), {
+                    fallback: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerJsDefault.default), {}, void 0, false, void 0, void 0),
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(InstaMart, {}, void 0, false, {
+                        fileName: "src/app.js",
+                        lineNumber: 56,
+                        columnNumber: 47
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 56,
                     columnNumber: 14
                 }, undefined)
             }
@@ -3057,18 +3085,19 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appRouter
 }, void 0, false, {
     fileName: "src/app.js",
-    lineNumber: 72,
+    lineNumber: 60,
     columnNumber: 13
 }, undefined));
-var _c;
-$RefreshReg$(_c, "AppLayout");
+var _c, _c1;
+$RefreshReg$(_c, "InstaMart");
+$RefreshReg$(_c1, "AppLayout");
 
   $parcel$ReactRefreshHelpers$f79a.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header.js":"hsJbF","./components/body.js":"fxbaO","./components/Footer.js":"8pPOA","react-router-dom":"9xmpe","./components/about.js":"adsiP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/eror.js":"2jBqd","./components/contact.js":"kLvWg"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header.js":"hsJbF","./components/body.js":"fxbaO","./components/Footer.js":"8pPOA","react-router-dom":"9xmpe","./components/about.js":"adsiP","./components/eror.js":"2jBqd","./components/contact.js":"kLvWg","./components/ResMenu.js":"64uZe","./components/profile.js":"5ILuw","./utils/useOnline":"74Yls","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","b162e82d332fbfaa":"8HMCN","./components/shimmer.js":"fWXGy"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27322,22 +27351,23 @@ const Header = ()=>{
                             lineNumber: 11,
                             columnNumber: 11
                         }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                to: "/Contact",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                            to: "Contact",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                                 children: "Contact"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
                                 lineNumber: 12,
-                                columnNumber: 15
+                                columnNumber: 30
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
                             lineNumber: 12,
                             columnNumber: 11
                         }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Cart"
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                            to: "Instamart",
+                            children: "InstaMart"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
                             lineNumber: 13,
@@ -27372,175 +27402,7 @@ $RefreshReg$(_c1, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"km3Ru":[function(require,module,exports) {
-"use strict";
-var Refresh = require("7422ead32dcc1e6b");
-function debounce(func, delay) {
-    {
-        let timeout = undefined;
-        let lastTime = 0;
-        return function(args) {
-            // Call immediately if last call was more than the delay ago.
-            // Otherwise, set a timeout. This means the first call is fast
-            // (for the common case of a single update), and subsequent updates
-            // are batched.
-            let now = Date.now();
-            if (now - lastTime > delay) {
-                lastTime = now;
-                func.call(null, args);
-            } else {
-                clearTimeout(timeout);
-                timeout = setTimeout(function() {
-                    timeout = undefined;
-                    lastTime = Date.now();
-                    func.call(null, args);
-                }, delay);
-            }
-        };
-    }
-}
-var enqueueUpdate = debounce(function() {
-    Refresh.performReactRefresh();
-}, 30);
-// Everthing below is either adapted or copied from
-// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
-// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
-module.exports.prelude = function(module1) {
-    window.$RefreshReg$ = function(type, id) {
-        Refresh.register(type, module1.id + " " + id);
-    };
-    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
-};
-module.exports.postlude = function(module1) {
-    if (isReactRefreshBoundary(module1.exports)) {
-        registerExportsForReactRefresh(module1);
-        if (module1.hot) {
-            module1.hot.dispose(function(data) {
-                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
-                data.prevExports = module1.exports;
-            });
-            module1.hot.accept(function(getParents) {
-                var prevExports = module1.hot.data.prevExports;
-                var nextExports = module1.exports;
-                // Since we just executed the code for it, it's possible
-                // that the new exports make it ineligible for being a boundary.
-                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports);
-                // It can also become ineligible if its exports are incompatible
-                // with the previous exports.
-                // For example, if you add/remove/change exports, we'll want
-                // to re-execute the importing modules, and force those components
-                // to re-render. Similarly, if you convert a class component
-                // to a function, we want to invalidate the boundary.
-                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
-                if (isNoLongerABoundary || didInvalidate) {
-                    // We'll be conservative. The only case in which we won't do a full
-                    // reload is if all parent modules are also refresh boundaries.
-                    // In that case we'll add them to the current queue.
-                    var parents = getParents();
-                    if (parents.length === 0) {
-                        // Looks like we bubbled to the root. Can't recover from that.
-                        window.location.reload();
-                        return;
-                    }
-                    return parents;
-                }
-                enqueueUpdate();
-            });
-        }
-    }
-};
-function isReactRefreshBoundary(exports) {
-    if (Refresh.isLikelyComponentType(exports)) return true;
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    return false;
-    var hasExports = false;
-    var areAllExportsComponents = true;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        hasExports = true;
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
-        return false;
-        var exportValue = exports[key];
-        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
-    }
-    return hasExports && areAllExportsComponents;
-}
-function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
-    var prevSignature = getRefreshBoundarySignature(prevExports);
-    var nextSignature = getRefreshBoundarySignature(nextExports);
-    if (prevSignature.length !== nextSignature.length) return true;
-    for(var i = 0; i < nextSignature.length; i++){
-        if (prevSignature[i] !== nextSignature[i]) return true;
-    }
-    return false;
-}
-// When this signature changes, it's unsafe to stop at this refresh boundary.
-function getRefreshBoundarySignature(exports) {
-    var signature = [];
-    signature.push(Refresh.getFamilyByType(exports));
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return signature;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        signature.push(key);
-        signature.push(Refresh.getFamilyByType(exportValue));
-    }
-    return signature;
-}
-function registerExportsForReactRefresh(module1) {
-    var exports = module1.exports, id = module1.id;
-    Refresh.register(exports, id + " %exports%");
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        var typeID = id + " %exports% " + key;
-        Refresh.register(exportValue, typeID);
-    }
-}
-
-},{"7422ead32dcc1e6b":"786KC"}],"9xmpe":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports) {
 /**
  * React Router DOM v6.13.0
  *
@@ -33071,7 +32933,175 @@ function getTargetMatch(matches, location) {
     return pathMatches[pathMatches.length - 1];
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fxbaO":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"km3Ru":[function(require,module,exports) {
+"use strict";
+var Refresh = require("7422ead32dcc1e6b");
+function debounce(func, delay) {
+    {
+        let timeout = undefined;
+        let lastTime = 0;
+        return function(args) {
+            // Call immediately if last call was more than the delay ago.
+            // Otherwise, set a timeout. This means the first call is fast
+            // (for the common case of a single update), and subsequent updates
+            // are batched.
+            let now = Date.now();
+            if (now - lastTime > delay) {
+                lastTime = now;
+                func.call(null, args);
+            } else {
+                clearTimeout(timeout);
+                timeout = setTimeout(function() {
+                    timeout = undefined;
+                    lastTime = Date.now();
+                    func.call(null, args);
+                }, delay);
+            }
+        };
+    }
+}
+var enqueueUpdate = debounce(function() {
+    Refresh.performReactRefresh();
+}, 30);
+// Everthing below is either adapted or copied from
+// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
+// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
+module.exports.prelude = function(module1) {
+    window.$RefreshReg$ = function(type, id) {
+        Refresh.register(type, module1.id + " " + id);
+    };
+    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
+};
+module.exports.postlude = function(module1) {
+    if (isReactRefreshBoundary(module1.exports)) {
+        registerExportsForReactRefresh(module1);
+        if (module1.hot) {
+            module1.hot.dispose(function(data) {
+                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
+                data.prevExports = module1.exports;
+            });
+            module1.hot.accept(function(getParents) {
+                var prevExports = module1.hot.data.prevExports;
+                var nextExports = module1.exports;
+                // Since we just executed the code for it, it's possible
+                // that the new exports make it ineligible for being a boundary.
+                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports);
+                // It can also become ineligible if its exports are incompatible
+                // with the previous exports.
+                // For example, if you add/remove/change exports, we'll want
+                // to re-execute the importing modules, and force those components
+                // to re-render. Similarly, if you convert a class component
+                // to a function, we want to invalidate the boundary.
+                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
+                if (isNoLongerABoundary || didInvalidate) {
+                    // We'll be conservative. The only case in which we won't do a full
+                    // reload is if all parent modules are also refresh boundaries.
+                    // In that case we'll add them to the current queue.
+                    var parents = getParents();
+                    if (parents.length === 0) {
+                        // Looks like we bubbled to the root. Can't recover from that.
+                        window.location.reload();
+                        return;
+                    }
+                    return parents;
+                }
+                enqueueUpdate();
+            });
+        }
+    }
+};
+function isReactRefreshBoundary(exports) {
+    if (Refresh.isLikelyComponentType(exports)) return true;
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    return false;
+    var hasExports = false;
+    var areAllExportsComponents = true;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        hasExports = true;
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
+        return false;
+        var exportValue = exports[key];
+        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
+    }
+    return hasExports && areAllExportsComponents;
+}
+function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
+    var prevSignature = getRefreshBoundarySignature(prevExports);
+    var nextSignature = getRefreshBoundarySignature(nextExports);
+    if (prevSignature.length !== nextSignature.length) return true;
+    for(var i = 0; i < nextSignature.length; i++){
+        if (prevSignature[i] !== nextSignature[i]) return true;
+    }
+    return false;
+}
+// When this signature changes, it's unsafe to stop at this refresh boundary.
+function getRefreshBoundarySignature(exports) {
+    var signature = [];
+    signature.push(Refresh.getFamilyByType(exports));
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return signature;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        signature.push(key);
+        signature.push(Refresh.getFamilyByType(exportValue));
+    }
+    return signature;
+}
+function registerExportsForReactRefresh(module1) {
+    var exports = module1.exports, id = module1.id;
+    Refresh.register(exports, id + " %exports%");
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        var typeID = id + " %exports% " + key;
+        Refresh.register(exportValue, typeID);
+    }
+}
+
+},{"7422ead32dcc1e6b":"786KC"}],"fxbaO":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$3ad2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -33081,21 +33111,23 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
 var _constant = require("../constant");
 var _restaurantCard = require("./RestaurantCard");
 var _restaurantCardDefault = parcelHelpers.interopDefault(_restaurantCard);
+var _react = require("react");
 var _shimmer = require("./shimmer");
 var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
+var _reactRouterDom = require("react-router-dom");
+var _helper = require("../utils/helper");
+var _useOnline = require("../utils/useOnline");
+var _useOnlineDefault = parcelHelpers.interopDefault(_useOnline);
 var _s = $RefreshSig$();
-function filterData(searchInput, Restaurants) {
-    return Restaurants.filter((Restraunt)=>Restraunt?.data?.name?.toLowerCase()?.includes(searchInput.toLowerCase()));
-}
 const Body = ()=>{
     _s();
     const [filterRestaurants, setFilterRestaurants] = (0, _react.useState)([]);
     const [allRestaurants, setAllRestaurants] = (0, _react.useState)([]);
     const [searchInput, setSearchInput] = (0, _react.useState)("");
+    const isOnline = (0, _useOnlineDefault.default)();
     (0, _react.useEffect)(()=>{
         //API call withoput dependcy so it use useffect only once after render
         getRestaurant();
@@ -33111,9 +33143,16 @@ const Body = ()=>{
     // if restaurnat is empty - shimmer ui
     // if rest hasa data = actual ui
     //it is by if else(ternary) in return stmt
+    if (!isOnline) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "OOPS! Seems like  you are OFFLINE"
+    }, void 0, false, {
+        fileName: "src/components/body.js",
+        lineNumber: 31,
+        columnNumber: 12
+    }, undefined);
     return allRestaurants.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/body.js",
-        lineNumber: 30,
+        lineNumber: 33,
         columnNumber: 40
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
@@ -33130,56 +33169,64 @@ const Body = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/components/body.js",
-                        lineNumber: 32,
+                        lineNumber: 35,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                         className: "search-btn",
                         onClick: ()=>{
-                            const data = filterData(searchInput, allRestaurants);
+                            const data = (0, _helper.filterData)(searchInput, allRestaurants);
                             setFilterRestaurants(data);
                         },
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/body.js",
-                        lineNumber: 35,
+                        lineNumber: 38,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/body.js",
-                lineNumber: 31,
+                lineNumber: 34,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "Restraunt-list",
                 children: filterRestaurants.length ? filterRestaurants.map((EachObj)=>{
-                    return /*#__PURE__*/ (0, _react.createElement)((0, _restaurantCardDefault.default), {
-                        ...EachObj.data,
-                        key: EachObj.data.id,
-                        __source: {
+                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/ResMenu/" + EachObj.data.id,
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
+                            ...EachObj.data
+                        }, void 0, false, {
                             fileName: "src/components/body.js",
-                            lineNumber: 45,
-                            columnNumber: 16
-                        },
-                        __self: undefined
-                    });
+                            lineNumber: 49,
+                            columnNumber: 17
+                        }, undefined)
+                    }, EachObj.data.id, false, {
+                        fileName: "src/components/body.js",
+                        lineNumber: 48,
+                        columnNumber: 16
+                    }, undefined);
                 }) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                     children: "NO reuslt"
                 }, void 0, false, {
                     fileName: "src/components/body.js",
-                    lineNumber: 46,
+                    lineNumber: 51,
                     columnNumber: 12
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/body.js",
-                lineNumber: 43,
+                lineNumber: 46,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(Body, "wzniSzpqsDMZG9Z3l3296VGCuU8=");
+_s(Body, "FDn1EXP1Dq/3tOq7LfdWjya41fQ=", false, function() {
+    return [
+        (0, _useOnlineDefault.default)
+    ];
+});
 _c = Body;
 exports.default = Body;
 var _c;
@@ -33190,7 +33237,7 @@ $RefreshReg$(_c, "Body");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../constant":"jVIFP","./RestaurantCard":"bMboU","./shimmer":"fWXGy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jVIFP":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../constant":"jVIFP","./RestaurantCard":"bMboU","react":"21dqq","./shimmer":"fWXGy","react-router-dom":"9xmpe","../utils/helper":"3GF3D","../utils/useOnline":"74Yls","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jVIFP":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "CDN_IMG_URL", ()=>CDN_IMG_URL);
@@ -33347,8 +33394,8 @@ const shimmer = ()=>{
                 className: "shimmer-card"
             }, index, false, {
                 fileName: "src/components/shimmer.js",
-                lineNumber: 6,
-                columnNumber: 34
+                lineNumber: 5,
+                columnNumber: 32
             }, undefined))
     }, void 0, false, {
         fileName: "src/components/shimmer.js",
@@ -33363,7 +33410,53 @@ exports.default = shimmer;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8pPOA":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3GF3D":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "filterData", ()=>filterData);
+function filterData(searchInput, Restaurants) {
+    return Restaurants.filter((Restraunt)=>Restraunt?.data?.name?.toLowerCase()?.includes(searchInput.toLowerCase()));
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"74Yls":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$03b2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$03b2.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _s = $RefreshSig$();
+const isOnline = ()=>{
+    _s();
+    const [status, setStatus] = (0, _react.useState)(true);
+    const handleOnline = ()=>{
+        setStatus(false);
+    };
+    const handleOffline = ()=>{
+        setStatus(true);
+    };
+    (0, _react.useEffect)(()=>{
+        window.addEventListener("offline", handleOnline);
+        window.addEventListener("online", handleOffline);
+        return ()=>{
+            window.removeEventListener("offline", handleOffline);
+            window.removeEventListener("online", handleOnline);
+        };
+    }, []);
+    return status;
+};
+_s(isOnline, "YEm6bcmWAfKQ/sO7AUsCEPnNcf0=");
+exports.default = isOnline;
+
+  $parcel$ReactRefreshHelpers$03b2.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8pPOA":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -33401,6 +33494,7 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
 const about = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
@@ -33420,6 +33514,25 @@ const about = ()=>{
                 fileName: "src/components/about.js",
                 lineNumber: 7,
                 columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
+                fileName: "src/components/about.js",
+                lineNumber: 8,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                to: "profile",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    children: "Click here"
+                }, void 0, false, {
+                    fileName: "src/components/about.js",
+                    lineNumber: 11,
+                    columnNumber: 28
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/about.js",
+                lineNumber: 11,
+                columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
@@ -33435,7 +33548,7 @@ exports.default = about;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2jBqd":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2jBqd":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$aa28 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -33501,7 +33614,7 @@ $RefreshReg$(_c, "Error");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"kLvWg":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kLvWg":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$c69a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -33511,15 +33624,217 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _s = $RefreshSig$();
 const contact = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: "contact"
-    }, void 0, false, {
+    _s();
+    const credentials = {
+        username: "",
+        email: "",
+        password: ""
+    };
+    const [Ncredentials, SetNcredentials] = (0, _react.useState)(credentials);
+    const [error, setError] = (0, _react.useState)({});
+    const [isValid, setValid] = (0, _react.useState)(false);
+    const [xyz, setXyx] = (0, _react.useState)("");
+    const handleForm = (e)=>{
+        const { name , value  } = e.target;
+        SetNcredentials({
+            ...Ncredentials,
+            [name]: value
+        });
+    };
+    const handleSubmit = (e)=>{
+        e.preventDefault();
+        setError(Validate(Ncredentials));
+        setValid(true);
+    // if(Object.keys(error).length === 0 && isValid){
+    //             setXyx("Success")
+    //         }
+    };
+    (0, _react.useEffect)(()=>{
+        if (Object.keys(error).length === 0 && isValid) setXyx("Success");
+    // error .length
+    //    else if (Object.keys(error).length != 0 && isValid){
+    //     setXyx("Not Success")
+    // }
+    }, [
+        error
+    ]);
+    const Validate = (values)=>{
+        const err = {};
+        if (values.username.length === 0) err.username = "username reuqired";
+        if (!values.email) err.email = "email reuqired";
+        if (!values.password) err.password = "passwrod reuqired";
+        return err;
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "contact US"
+            }, void 0, false, {
+                fileName: "src/components/contact.js",
+                lineNumber: 53,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("pre", {
+                children: JSON.stringify(Ncredentials, undefined, 2)
+            }, void 0, false, {
+                fileName: "src/components/contact.js",
+                lineNumber: 54,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+                onSubmit: handleSubmit,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                children: "Username"
+                            }, void 0, false, {
+                                fileName: "src/components/contact.js",
+                                lineNumber: 57,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                                fileName: "src/components/contact.js",
+                                lineNumber: 58,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                type: "text",
+                                placeholder: "Username",
+                                name: "username",
+                                value: Ncredentials.username,
+                                onChange: handleForm
+                            }, void 0, false, {
+                                fileName: "src/components/contact.js",
+                                lineNumber: 59,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/contact.js",
+                        lineNumber: 56,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        children: error.username
+                    }, void 0, false, {
+                        fileName: "src/components/contact.js",
+                        lineNumber: 61,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                children: "Email"
+                            }, void 0, false, {
+                                fileName: "src/components/contact.js",
+                                lineNumber: 63,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                                fileName: "src/components/contact.js",
+                                lineNumber: 64,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                type: "text",
+                                placeholder: "Email",
+                                name: "email",
+                                value: Ncredentials.email,
+                                onChange: handleForm
+                            }, void 0, false, {
+                                fileName: "src/components/contact.js",
+                                lineNumber: 65,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/contact.js",
+                        lineNumber: 62,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        children: error.email
+                    }, void 0, false, {
+                        fileName: "src/components/contact.js",
+                        lineNumber: 67,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                children: "Password"
+                            }, void 0, false, {
+                                fileName: "src/components/contact.js",
+                                lineNumber: 69,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                                fileName: "src/components/contact.js",
+                                lineNumber: 70,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                type: "password",
+                                placeholder: "Password",
+                                name: "password",
+                                value: Ncredentials.password,
+                                onChange: handleForm
+                            }, void 0, false, {
+                                fileName: "src/components/contact.js",
+                                lineNumber: 71,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/contact.js",
+                        lineNumber: 68,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        children: error.password
+                    }, void 0, false, {
+                        fileName: "src/components/contact.js",
+                        lineNumber: 73,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                            children: "Submit"
+                        }, void 0, false, {
+                            fileName: "src/components/contact.js",
+                            lineNumber: 75,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/contact.js",
+                        lineNumber: 74,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        children: xyz
+                    }, void 0, false, {
+                        fileName: "src/components/contact.js",
+                        lineNumber: 77,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/contact.js",
+                lineNumber: 55,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
         fileName: "src/components/contact.js",
-        lineNumber: 2,
+        lineNumber: 52,
         columnNumber: 10
     }, undefined);
 };
+_s(contact, "YXVavDZMCa5XjhfaiFPC3dhdDv8=");
 exports.default = contact;
 
   $parcel$ReactRefreshHelpers$c69a.postlude(module);
@@ -33527,6 +33842,291 @@ exports.default = contact;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["hklly","1xC6H","bNKaB"], "bNKaB", "parcelRequiredd69")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"64uZe":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ebe7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ebe7.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+var _constant = require("../constant");
+var _react = require("react");
+var _shimmer = require("./shimmer");
+var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
+var _useRestaurant = require("../utils/useRestaurant");
+var _useRestaurantDefault = parcelHelpers.interopDefault(_useRestaurant);
+var _s = $RefreshSig$();
+const ResMenu = ()=>{
+    _s();
+    const data = (0, _reactRouterDom.useParams)();
+    const { id  } = (0, _reactRouterDom.useParams)();
+    //const {id} = usePAram();
+    //
+    const [Startingmenu, Mainmenu] = (0, _useRestaurantDefault.default)(id);
+    //we can use only one usestae , i just made this for my ease
+    // early return or use ternary operwtion
+    if (!Startingmenu) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
+        fileName: "src/components/ResMenu.js",
+        lineNumber: 20,
+        columnNumber: 12
+    }, undefined);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "Menu-items",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        children: Startingmenu?.card?.card?.info?.name
+                    }, void 0, false, {
+                        fileName: "src/components/ResMenu.js",
+                        lineNumber: 26,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        src: (0, _constant.CDN_IMG_URL) + Startingmenu?.card?.card?.info?.cloudinaryImageId
+                    }, void 0, false, {
+                        fileName: "src/components/ResMenu.js",
+                        lineNumber: 27,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ResMenu.js",
+                lineNumber: 25,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        children: "Main Menu"
+                    }, void 0, false, {
+                        fileName: "src/components/ResMenu.js",
+                        lineNumber: 30,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                        children: Mainmenu.map((obj)=>{
+                            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                children: obj?.card?.info?.name
+                            }, obj.card.info.id, false, {
+                                fileName: "src/components/ResMenu.js",
+                                lineNumber: 33,
+                                columnNumber: 18
+                            }, undefined);
+                        })
+                    }, void 0, false, {
+                        fileName: "src/components/ResMenu.js",
+                        lineNumber: 31,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ResMenu.js",
+                lineNumber: 29,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/ResMenu.js",
+        lineNumber: 22,
+        columnNumber: 10
+    }, undefined);
+};
+_s(ResMenu, "Yls04wYeCPwLR8hRQXrgj6g6aUY=", false, function() {
+    return [
+        (0, _reactRouterDom.useParams),
+        (0, _reactRouterDom.useParams),
+        (0, _useRestaurantDefault.default)
+    ];
+});
+_c = ResMenu;
+exports.default = ResMenu;
+var _c;
+$RefreshReg$(_c, "ResMenu");
+
+  $parcel$ReactRefreshHelpers$ebe7.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","../constant":"jVIFP","react":"21dqq","./shimmer":"fWXGy","../utils/useRestaurant":"ewgpj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ewgpj":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5009 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5009.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _s = $RefreshSig$();
+const useRestaurant = (id)=>{
+    _s();
+    const [Startingmenu, getMenu] = (0, _react.useState)(null);
+    const [Mainmenu, getMainMenu] = (0, _react.useState)([]);
+    (0, _react.useEffect)(()=>{
+        getResturantMenu();
+    }, []);
+    async function getResturantMenu() {
+        const data = await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=21.1702401&lng=72.83106070000001&&submitAction=ENTER&restaurantId=" + id);
+        const json = await data.json();
+        const restaurantData = json?.data?.cards[0];
+        const Menu = json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards;
+        getMenu(restaurantData);
+        getMainMenu(Menu);
+    }
+    return [
+        Startingmenu,
+        Mainmenu
+    ];
+};
+_s(useRestaurant, "haVpb/3tdRmw0v5vV/tK1ZOQTHw=");
+exports.default = useRestaurant;
+
+  $parcel$ReactRefreshHelpers$5009.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5ILuw":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$34a2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$34a2.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const profile = function() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+            children: "This is me"
+        }, void 0, false, {
+            fileName: "src/components/profile.js",
+            lineNumber: 3,
+            columnNumber: 13
+        }, this)
+    }, void 0, false, {
+        fileName: "src/components/profile.js",
+        lineNumber: 2,
+        columnNumber: 10
+    }, this);
+};
+exports.default = profile;
+
+  $parcel$ReactRefreshHelpers$34a2.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8HMCN":[function(require,module,exports) {
+module.exports = require("c31d3cc0e2de324b")(require("710991af0d7c9614").getBundleURL("lPpKD") + "Instamart.0762395e.js" + "?" + Date.now()).catch((err)=>{
+    delete module.bundle.cache[module.id];
+    throw err;
+}).then(()=>module.bundle.root("gB4Fs"));
+
+},{"c31d3cc0e2de324b":"61B45","710991af0d7c9614":"lgJ39"}],"61B45":[function(require,module,exports) {
+"use strict";
+var cacheLoader = require("ca2a84f7fa4a3bb0");
+module.exports = cacheLoader(function(bundle) {
+    return new Promise(function(resolve, reject) {
+        // Don't insert the same script twice (e.g. if it was already in the HTML)
+        var existingScripts = document.getElementsByTagName("script");
+        if ([].concat(existingScripts).some(function isCurrentBundle(script) {
+            return script.src === bundle;
+        })) {
+            resolve();
+            return;
+        }
+        var preloadLink = document.createElement("link");
+        preloadLink.href = bundle;
+        preloadLink.rel = "preload";
+        preloadLink.as = "script";
+        document.head.appendChild(preloadLink);
+        var script = document.createElement("script");
+        script.async = true;
+        script.type = "text/javascript";
+        script.src = bundle;
+        script.onerror = function(e) {
+            var error = new TypeError("Failed to fetch dynamically imported module: ".concat(bundle, ". Error: ").concat(e.message));
+            script.onerror = script.onload = null;
+            script.remove();
+            reject(error);
+        };
+        script.onload = function() {
+            script.onerror = script.onload = null;
+            resolve();
+        };
+        document.getElementsByTagName("head")[0].appendChild(script);
+    });
+});
+
+},{"ca2a84f7fa4a3bb0":"j49pS"}],"j49pS":[function(require,module,exports) {
+"use strict";
+var cachedBundles = {};
+var cachedPreloads = {};
+var cachedPrefetches = {};
+function getCache(type) {
+    switch(type){
+        case "preload":
+            return cachedPreloads;
+        case "prefetch":
+            return cachedPrefetches;
+        default:
+            return cachedBundles;
+    }
+}
+module.exports = function(loader, type) {
+    return function(bundle) {
+        var cache = getCache(type);
+        if (cache[bundle]) return cache[bundle];
+        return cache[bundle] = loader.apply(null, arguments).catch(function(e) {
+            delete cache[bundle];
+            throw e;
+        });
+    };
+};
+
+},{}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+}
+// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}]},["hklly","1xC6H","bNKaB"], "bNKaB", "parcelRequiredd69")
 
 //# sourceMappingURL=index.0641b553.js.map

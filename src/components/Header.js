@@ -20,8 +20,8 @@ const Header = () => {
         <ul>
           <Link to = "/"><li>Home</li></Link>
           <Link to = "/about"><li>About Us</li></Link>
-          <li><Link to = "/Contact">Contact</Link></li>
-          <li>Cart</li>
+          <Link to = "Contact"><li>Contact</li></Link>
+          <Link to ="Instamart">InstaMart</Link>
         </ul>
       </div>
     </div>

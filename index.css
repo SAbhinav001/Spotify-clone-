@@ -1,48 +1,61 @@
-
 .header {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px;
-    border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  border: 1px solid black;
 }
 
-.nav-items >ul  {
-    list-style-type: none;
-    display: flex;
-   
+.nav-items > ul {
+  list-style-type: none;
+  display: flex;
 }
 
 .nav-items > ul > li {
-    padding: 10px;
+  padding: 10px;
 }
 
 .logo {
-    width: 100px;
+  width: 100px;
 }
 
 .card {
-    width: 200px;
-    border: 1px solid black;
-    margin: 10px;
-    padding: 10px;
-    /* overflow: scroll; */
+  /* width: 200px;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+  overflow: scroll; */
+  width: 240px;
+  border-radius: 5px;
+  box-shadow: -1px 5px 10px 5px rgba(42, 42, 42, 0.2);
+  padding: 10px;
+  margin: 20px;
+  cursor: pointer;
 }
 
-
 .card > img {
-    width: 100%;
+  width: 100%;
 }
 
 .Restraunt-list {
-    display: flex;
-    flex-wrap: wrap;
-    
+   width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
 }
-.shimmer-card{
-    height: 200px;
-    width: 200px;
-    background-color: lightgrey;
-    margin: 10px;
-    padding: 10px;
-    
+.shimmer-card {
+  height: 200px;
+  width: 200px;
+  background-color: lightgrey;
+  margin: 10px;
+  padding: 10px;
 }
+.Menu-items {
+  display: flex;
+}
+
+a {
+  color: black;
+}
+

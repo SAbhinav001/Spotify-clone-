@@ -19,10 +19,12 @@
 }
 
 .card {
-  width: 200px;
-  border: 1px solid #000;
-  margin: 10px;
+  width: 240px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 20px;
   padding: 10px;
+  box-shadow: -1px 5px 10px 5px #2a2a2a33;
 }
 
 .card > img {
@@ -30,7 +32,11 @@
 }
 
 .Restraunt-list {
+  width: auto;
   flex-wrap: wrap;
+  justify-content: center;
+  align-self: stretch;
+  align-items: center;
   display: flex;
 }
 
@@ -40,6 +46,14 @@
   background-color: #d3d3d3;
   margin: 10px;
   padding: 10px;
+}
+
+.Menu-items {
+  display: flex;
+}
+
+a {
+  color: #000;
 }
 
 /*# sourceMappingURL=React project.9e4c6fd2.css.map */
