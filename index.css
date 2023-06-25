@@ -59,3 +59,14 @@ a {
   color: black;
 }
 
+.row{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+.Board{
+  width: 400px;
+  align-items: center;
+}
+

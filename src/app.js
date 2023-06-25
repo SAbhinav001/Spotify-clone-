@@ -13,6 +13,7 @@ import ResMenu from "./components/ResMenu.js";
 import Profile from "./components/profile.js"
 import useOnline from "./utils/useOnline"
 import Shimmer from "./components/shimmer.js"
+import Game from "./components/TicToe.js";
 
 
 const InstaMart = lazy(() => import("./components/Instamart.js"))
@@ -70,6 +71,10 @@ const appRouter = createBrowserRouter([
       {
         path:"/Instamart",
         element: <Suspense fallback ={<Shimmer/>}><InstaMart /></Suspense>
+      },
+      {
+        path:"/game",
+        element: <Game />
       }
     ],
   },

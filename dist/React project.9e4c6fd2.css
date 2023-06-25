@@ -56,4 +56,15 @@ a {
   color: #000;
 }
 
+.row {
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+}
+
+.Board {
+  width: 400px;
+  align-items: center;
+}
+
 /*# sourceMappingURL=React project.9e4c6fd2.css.map */

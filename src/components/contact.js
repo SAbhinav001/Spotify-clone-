@@ -10,6 +10,7 @@ const contact = () => {
   const handleForm = (e) => {
     const { name, value } = e.target;
     SetNcredentials({ ...Ncredentials, [name]: value });
+
   };
 
   const handleSubmit = (e) => {
