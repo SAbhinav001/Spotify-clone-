@@ -9,7 +9,10 @@ const contact = () => {
 
   const handleForm = (e) => {
     const { name, value } = e.target;
-    SetNcredentials({ ...Ncredentials, [name]: value });
+    const nCred = {...Ncredentials};
+    nCred[name] = value
+    SetNcredentials(nCred) 
+    // SetNcredentials({ ...Ncredentials, [name]: value });
 
   };
 

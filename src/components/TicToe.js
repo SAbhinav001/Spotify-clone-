@@ -1,16 +1,25 @@
 import Gameox from "./Gamebox"
-import {useState } from "react";
+import {useState , useRef} from "react";
+import "./index.css";
 
 const TicToe = () =>{
 
  const [state, setState] = useState(Array(9).fill(null));
  const [isXturn, setXturn] = useState(true);
 
+//  const ref1 = useRef();
+
+const [abc, setAbc] = useState("")
+
+
  const HandleClick = (index) => {
-    const copyState = [...state];
-    copyState[index] = isXturn ? "X" : "0";
-    setState(copyState);
-    setXturn(!isXturn);
+
+    if(!state[index]){
+        const copyState = [...state];
+        copyState[index] = isXturn ? "X" : "0";
+        setState(copyState);
+        setXturn(!isXturn);
+    }
 }
 
 const Winner =() =>{
@@ -45,8 +54,19 @@ const iswin = Winner();
                 <Gameox  x={() => { HandleClick(7)}} value={state[7]}/>
                 <Gameox  x={() => { HandleClick(8)}} value={state[8]}/>
             </div>
+
+            {/* const elt = ref1.current
+                elt.style.color ="red" */}
+
+            <button onClick={()=>{setAbc("abcefghijkl")}}>click here</button>
+         {/* //   <p ref={ref1}>checng tis color</p> */}
+
+         <p className={abc}>Chemge the color </p>
+
         </div>
 )
 }
+
+
 
 export default TicToe;

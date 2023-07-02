@@ -604,40 +604,159 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Instamart = ()=>{
+var _react = require("react");
+var _s = $RefreshSig$();
+const Element = ({ title , discription , isVisible , setIsVisisble  })=>{
+    //const [isVisible, setIsVisisble] = useState(false);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        style: {
+            border: "1px solid black",
+            padding: "5px",
+            margin: "5px"
+        },
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "This is for Lazy loading "
+                children: title
             }, void 0, false, {
                 fileName: "src/components/Instamart.js",
-                lineNumber: 3,
-                columnNumber: 9
+                lineNumber: 15,
+                columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: "Will coming SOON!"
+            isVisible ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                onClick: ()=>setIsVisisble(""),
+                children: "Hide"
             }, void 0, false, {
                 fileName: "src/components/Instamart.js",
-                lineNumber: 4,
-                columnNumber: 9
+                lineNumber: 16,
+                columnNumber: 20
+            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                onClick: ()=>setIsVisisble(title),
+                children: "Show"
+            }, void 0, false, {
+                fileName: "src/components/Instamart.js",
+                lineNumber: 16,
+                columnNumber: 78
+            }, undefined),
+            isVisible && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: discription
+            }, void 0, false, {
+                fileName: "src/components/Instamart.js",
+                lineNumber: 18,
+                columnNumber: 21
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Instamart.js",
-        lineNumber: 2,
+        lineNumber: 10,
         columnNumber: 10
     }, undefined);
 };
-_c = Instamart;
+_c = Element;
+// const Instamart = () => {
+//     const [config, setConfig] = useState({
+//         element1 : false,
+//         element2 : false,
+//         element3 : false,
+//     })
+//   return (
+//     <div>
+//       <Element
+//         title={"Element1"}
+//         discription={
+//           "ldjhbvahjvcahgvcahgdcvashbcasjhcbajhscbvaksjhgcvbasjhdbvcajhcvahgdcvashgcvahsjcvashgcvshgcvahsgdvcakhsgsdcvas"
+//         }
+//         isVisible={config.element1}
+//         setIsVisisble={()=>setConfig({
+//             element1 : true,
+//             element2 : false,
+//             element3 : false,
+//         })}
+//       />
+//       <Element
+//         title={"Element2"}
+//         discription={
+//           "ldjhbvahjvcahgvcahgdcvashbcasjhcbajhscbvaksjhgcvbasjhdbvcajhcvahgdcvashgcvahsjcvashgcvshgcvahsgdvcakhsgsdcvas"
+//         }
+//         isVisible={config.element2}
+//         setIsVisisble={()=>setConfig({
+//             element1 : false,
+//             element2 : true,
+//             element3 : false,
+//         })}
+//       />
+//       <Element
+//         title={"Element3"}
+//         discription={
+//           "ldjhbvahjvcahgvcahgdcvashbcasjhcbajhscbvaksjhgcvbasjhdbvcajhcvahgdcvashgcvahsjcvashgcvshgcvahsgdvcakhsgsdcvas"
+//         }
+//         isVisible={config.element3}
+//         setIsVisisble={()=>setConfig({
+//             element1 : false,
+//             element2 : false,
+//             element3 : true,
+//         })}
+//       />
+//     </div>
+//   );
+// };
+const Instamart = ()=>{
+    _s();
+    const [config, setConfig] = (0, _react.useState)(null);
+    const setFun = (xyz)=>setConfig(xyz);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Element, {
+                title: "Element1",
+                discription: "ldjhbvahjvcahgvcahgdcvashbcasjhcbajhscbvaksjhgcvbasjhdbvcajhcvahgdcvashgcvahsjcvashgcvshgcvahsgdvcakhsgsdcvas",
+                isVisible: config == "Element1",
+                //setIsVisisble={(xyz)=>setConfig(xyz)}
+                setIsVisisble: setFun
+            }, void 0, false, {
+                fileName: "src/components/Instamart.js",
+                lineNumber: 75,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Element, {
+                title: "Element2",
+                discription: "ldjhbvahjvcahgvcahgdcvashbcasjhcbajhscbvaksjhgcvbasjhdbvcajhcvahgdcvashgcvahsjcvashgcvshgcvahsgdvcakhsgsdcvas",
+                isVisible: config == "Element2",
+                //setIsVisisble={(xyz)=>setConfig(xyz)}
+                setIsVisisble: setFun
+            }, void 0, false, {
+                fileName: "src/components/Instamart.js",
+                lineNumber: 78,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Element, {
+                title: "Element3",
+                discription: "ldjhbvahjvcahgvcahgdcvashbcasjhcbajhscbvaksjhgcvbasjhdbvcajhcvahgdcvashgcvahsjcvashgcvshgcvahsgdvcakhsgsdcvas",
+                isVisible: config == "Element3",
+                // setIsVisisble={(xyz)=>setConfig(xyz)}
+                setIsVisisble: setFun
+            }, void 0, false, {
+                fileName: "src/components/Instamart.js",
+                lineNumber: 81,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Instamart.js",
+        lineNumber: 74,
+        columnNumber: 10
+    }, undefined);
+};
+_s(Instamart, "WxO3KVVv2sW+8mlg6BBZXEYaln4=");
+_c1 = Instamart;
 exports.default = Instamart;
-var _c;
-$RefreshReg$(_c, "Instamart");
+var _c, _c1;
+$RefreshReg$(_c, "Element");
+$RefreshReg$(_c1, "Instamart");
 
   $parcel$ReactRefreshHelpers$8238.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["gzT0l","1xC6H"], null, "parcelRequiredd69")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["gzT0l","1xC6H"], null, "parcelRequiredd69")
 
 //# sourceMappingURL=Instamart.0762395e.js.map

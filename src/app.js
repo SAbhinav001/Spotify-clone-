@@ -1,4 +1,4 @@
-import React, { lazy , Suspense} from "react";
+import React, { lazy , Suspense, useState} from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header.js";
 import Body from "./components/body.js";
@@ -14,6 +14,7 @@ import Profile from "./components/profile.js"
 import useOnline from "./utils/useOnline"
 import Shimmer from "./components/shimmer.js"
 import Game from "./components/TicToe.js";
+import userContext from "./utils/userContext.js"
 
 
 const InstaMart = lazy(() => import("./components/Instamart.js"))
@@ -26,13 +27,23 @@ const AppLayout = () => {
     return  <h1>OOPS! Seems like  you are OFFLINE</h1>
   }
 
+  const [user, setUser] = useState({
+    name:"abhinav",
+    email:"dummy@gmial.com"
+  })
+
   return (
     <>
-      <Header />
+    <userContext.Provider value={{
+      user1:user,
+      setuser :setUser,
+    }}>
+     <Header />
       {/* <Body /> */}
       <Outlet />
       <Footer />
-    </>
+    </userContext.Provider>
+  </>
   );
 };
  

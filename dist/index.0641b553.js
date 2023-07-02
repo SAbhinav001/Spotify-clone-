@@ -2971,6 +2971,8 @@ var _shimmerJs = require("./components/shimmer.js");
 var _shimmerJsDefault = parcelHelpers.interopDefault(_shimmerJs);
 var _ticToeJs = require("./components/TicToe.js");
 var _ticToeJsDefault = parcelHelpers.interopDefault(_ticToeJs);
+var _userContextJs = require("./utils/userContext.js");
+var _userContextJsDefault = parcelHelpers.interopDefault(_userContextJs);
 var _s = $RefreshSig$();
 const InstaMart = /*#__PURE__*/ (0, _react.lazy)(()=>require("b162e82d332fbfaa"));
 _c = InstaMart;
@@ -2981,30 +2983,44 @@ const AppLayout = ()=>{
         children: "OOPS! Seems like  you are OFFLINE"
     }, void 0, false, {
         fileName: "src/app.js",
-        lineNumber: 21,
+        lineNumber: 22,
         columnNumber: 12
     }, undefined);
+    const [user, setUser] = (0, _react.useState)({
+        name: "abhinav",
+        email: "dummy@gmial.com"
+    });
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerJsDefault.default), {}, void 0, false, {
-                fileName: "src/app.js",
-                lineNumber: 24,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
-                fileName: "src/app.js",
-                lineNumber: 26,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerJsDefault.default), {}, void 0, false, {
-                fileName: "src/app.js",
-                lineNumber: 27,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true);
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userContextJsDefault.default).Provider, {
+            value: {
+                user1: user,
+                setuser: setUser
+            },
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerJsDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 33,
+                    columnNumber: 6
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 35,
+                    columnNumber: 7
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerJsDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 36,
+                    columnNumber: 7
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/app.js",
+            lineNumber: 29,
+            columnNumber: 5
+        }, undefined)
+    }, void 0, false);
 };
-_s(AppLayout, "XQZuNqwLTT5c423yVrgGXkXVqoc=", false, function() {
+_s(AppLayout, "P/npvi/UEdXZHUQeTP7NsjDarJ4=", false, function() {
     return [
         (0, _useOnlineDefault.default)
     ];
@@ -3015,12 +3031,12 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
             fileName: "src/app.js",
-            lineNumber: 32,
+            lineNumber: 42,
             columnNumber: 12
         }, undefined),
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _erorJsDefault.default), {}, void 0, false, {
             fileName: "src/app.js",
-            lineNumber: 33,
+            lineNumber: 43,
             columnNumber: 17
         }, undefined),
         children: [
@@ -3028,7 +3044,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyJsDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 36,
+                    lineNumber: 46,
                     columnNumber: 14
                 }, undefined)
             },
@@ -3036,7 +3052,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/about",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutJsDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 39,
+                    lineNumber: 49,
                     columnNumber: 14
                 }, undefined)
             },
@@ -3044,7 +3060,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/about/profile",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileJsDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 48,
+                    lineNumber: 58,
                     columnNumber: 14
                 }, undefined)
             },
@@ -3052,7 +3068,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/Contact",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactJsDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 51,
+                    lineNumber: 61,
                     columnNumber: 14
                 }, undefined)
             },
@@ -3060,7 +3076,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/ResMenu/:id",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resMenuJsDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 54,
+                    lineNumber: 64,
                     columnNumber: 14
                 }, undefined)
             },
@@ -3070,12 +3086,12 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                     fallback: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerJsDefault.default), {}, void 0, false, void 0, void 0),
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(InstaMart, {}, void 0, false, {
                         fileName: "src/app.js",
-                        lineNumber: 57,
+                        lineNumber: 67,
                         columnNumber: 47
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 57,
+                    lineNumber: 67,
                     columnNumber: 14
                 }, undefined)
             },
@@ -3083,7 +3099,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/game",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ticToeJsDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 60,
+                    lineNumber: 70,
                     columnNumber: 14
                 }, undefined)
             }
@@ -3095,7 +3111,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appRouter
 }, void 0, false, {
     fileName: "src/app.js",
-    lineNumber: 64,
+    lineNumber: 74,
     columnNumber: 13
 }, undefined));
 var _c, _c1;
@@ -3107,7 +3123,7 @@ $RefreshReg$(_c1, "AppLayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header.js":"hsJbF","./components/body.js":"fxbaO","./components/Footer.js":"8pPOA","react-router-dom":"9xmpe","./components/about.js":"adsiP","./components/eror.js":"2jBqd","./components/contact.js":"kLvWg","./components/ResMenu.js":"64uZe","./components/profile.js":"5ILuw","./utils/useOnline":"74Yls","./components/shimmer.js":"fWXGy","b162e82d332fbfaa":"8HMCN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/TicToe.js":"6uT56"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header.js":"hsJbF","./components/body.js":"fxbaO","./components/Footer.js":"8pPOA","react-router-dom":"9xmpe","./components/about.js":"adsiP","./components/eror.js":"2jBqd","./components/contact.js":"kLvWg","./components/ResMenu.js":"64uZe","./components/profile.js":"5ILuw","./utils/useOnline":"74Yls","./components/shimmer.js":"fWXGy","./components/TicToe.js":"6uT56","./utils/userContext.js":"eBA1b","b162e82d332fbfaa":"8HMCN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -33139,13 +33155,16 @@ var _reactRouterDom = require("react-router-dom");
 var _helper = require("../utils/helper");
 var _useOnline = require("../utils/useOnline");
 var _useOnlineDefault = parcelHelpers.interopDefault(_useOnline);
+var _userContext = require("../utils/userContext");
+var _userContextDefault = parcelHelpers.interopDefault(_userContext);
 var _s = $RefreshSig$();
 const Body = ()=>{
     _s();
     const [filterRestaurants, setFilterRestaurants] = (0, _react.useState)([]);
     const [allRestaurants, setAllRestaurants] = (0, _react.useState)([]);
-    const [searchInput, setSearchInput] = (0, _react.useState)("");
+    const [searchInput, setSearchInput] = (0, _react.useState)(" ");
     const isOnline = (0, _useOnlineDefault.default)();
+    const { user1 , setuser  } = (0, _react.useContext)((0, _userContextDefault.default));
     (0, _react.useEffect)(()=>{
         //API call withoput dependcy so it use useffect only once after render
         getRestaurant();
@@ -33166,7 +33185,7 @@ const Body = ()=>{
     // }
     return allRestaurants.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/body.js",
-        lineNumber: 34,
+        lineNumber: 39,
         columnNumber: 40
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
@@ -33183,7 +33202,7 @@ const Body = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/components/body.js",
-                        lineNumber: 36,
+                        lineNumber: 41,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -33195,13 +33214,25 @@ const Body = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/body.js",
-                        lineNumber: 39,
+                        lineNumber: 44,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        type: "text",
+                        value: user1.name,
+                        onChange: (e)=>setuser({
+                                ...user1,
+                                name: e.target.value
+                            })
+                    }, void 0, false, {
+                        fileName: "src/components/body.js",
+                        lineNumber: 50,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/body.js",
-                lineNumber: 35,
+                lineNumber: 40,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -33213,30 +33244,30 @@ const Body = ()=>{
                             ...EachObj.data
                         }, void 0, false, {
                             fileName: "src/components/body.js",
-                            lineNumber: 50,
+                            lineNumber: 59,
                             columnNumber: 17
                         }, undefined)
                     }, EachObj.data.id, false, {
                         fileName: "src/components/body.js",
-                        lineNumber: 49,
+                        lineNumber: 58,
                         columnNumber: 16
                     }, undefined);
                 }) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                     children: "NO reuslt"
                 }, void 0, false, {
                     fileName: "src/components/body.js",
-                    lineNumber: 52,
+                    lineNumber: 61,
                     columnNumber: 12
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/body.js",
-                lineNumber: 47,
+                lineNumber: 56,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(Body, "FDn1EXP1Dq/3tOq7LfdWjya41fQ=", false, function() {
+_s(Body, "MPiYY7UThnXzsIPRk70iyvH+E08=", false, function() {
     return [
         (0, _useOnlineDefault.default)
     ];
@@ -33251,7 +33282,7 @@ $RefreshReg$(_c, "Body");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../constant":"jVIFP","./RestaurantCard":"bMboU","react":"21dqq","./shimmer":"fWXGy","react-router-dom":"9xmpe","../utils/helper":"3GF3D","../utils/useOnline":"74Yls","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jVIFP":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../constant":"jVIFP","./RestaurantCard":"bMboU","react":"21dqq","./shimmer":"fWXGy","react-router-dom":"9xmpe","../utils/helper":"3GF3D","../utils/useOnline":"74Yls","../utils/userContext":"eBA1b","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jVIFP":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "CDN_IMG_URL", ()=>CDN_IMG_URL);
@@ -33470,6 +33501,31 @@ exports.default = isOnline;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"eBA1b":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$268f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$268f.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+const users = /*#__PURE__*/ (0, _react.createContext)({
+    user1: {
+        name: "dummy",
+        email: "dummy@gmail.,com"
+    }
+});
+//for debugging
+users.displayName = "userContext";
+exports.default = users;
+
+  $parcel$ReactRefreshHelpers$268f.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
 },{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8pPOA":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
@@ -33480,13 +33536,26 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Footer = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-        children: "footer"
-    }, void 0, false, {
+var _react = require("react");
+var _userContext = require("../utils/userContext");
+var _userContextDefault = parcelHelpers.interopDefault(_userContext);
+var _s = $RefreshSig$();
+const Footer = ()=>{
+    _s();
+    const { user1  } = (0, _react.useContext)((0, _userContextDefault.default));
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+        children: [
+            user1.name,
+            " + ",
+            user1.email
+        ]
+    }, void 0, true, {
         fileName: "src/components/Footer.js",
-        lineNumber: 1,
-        columnNumber: 22
+        lineNumber: 7,
+        columnNumber: 10
     }, undefined);
+};
+_s(Footer, "iQiTYzViNN2dFAJ2ZtzZpWmkLyA=");
 _c = Footer;
 exports.default = Footer;
 var _c;
@@ -33497,7 +33566,7 @@ $RefreshReg$(_c, "Footer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"adsiP":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../utils/userContext":"eBA1b","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"adsiP":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$6418 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -33653,10 +33722,12 @@ const contact = ()=>{
     const [xyz, setXyx] = (0, _react.useState)("");
     const handleForm = (e)=>{
         const { name , value  } = e.target;
-        SetNcredentials({
-            ...Ncredentials,
-            [name]: value
-        });
+        const nCred = {
+            ...Ncredentials
+        };
+        nCred[name] = value;
+        SetNcredentials(nCred);
+    // SetNcredentials({ ...Ncredentials, [name]: value });
     };
     const handleSubmit = (e)=>{
         e.preventDefault();
@@ -33688,14 +33759,14 @@ const contact = ()=>{
                 children: "contact US"
             }, void 0, false, {
                 fileName: "src/components/contact.js",
-                lineNumber: 53,
+                lineNumber: 56,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("pre", {
                 children: JSON.stringify(Ncredentials, undefined, 2)
             }, void 0, false, {
                 fileName: "src/components/contact.js",
-                lineNumber: 54,
+                lineNumber: 57,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
@@ -33707,12 +33778,12 @@ const contact = ()=>{
                                 children: "Username"
                             }, void 0, false, {
                                 fileName: "src/components/contact.js",
-                                lineNumber: 57,
+                                lineNumber: 60,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                 fileName: "src/components/contact.js",
-                                lineNumber: 58,
+                                lineNumber: 61,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -33723,20 +33794,20 @@ const contact = ()=>{
                                 onChange: handleForm
                             }, void 0, false, {
                                 fileName: "src/components/contact.js",
-                                lineNumber: 59,
+                                lineNumber: 62,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/contact.js",
-                        lineNumber: 56,
+                        lineNumber: 59,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                         children: error.username
                     }, void 0, false, {
                         fileName: "src/components/contact.js",
-                        lineNumber: 61,
+                        lineNumber: 64,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -33745,12 +33816,12 @@ const contact = ()=>{
                                 children: "Email"
                             }, void 0, false, {
                                 fileName: "src/components/contact.js",
-                                lineNumber: 63,
+                                lineNumber: 66,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                 fileName: "src/components/contact.js",
-                                lineNumber: 64,
+                                lineNumber: 67,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -33761,20 +33832,20 @@ const contact = ()=>{
                                 onChange: handleForm
                             }, void 0, false, {
                                 fileName: "src/components/contact.js",
-                                lineNumber: 65,
+                                lineNumber: 68,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/contact.js",
-                        lineNumber: 62,
+                        lineNumber: 65,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                         children: error.email
                     }, void 0, false, {
                         fileName: "src/components/contact.js",
-                        lineNumber: 67,
+                        lineNumber: 70,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -33783,12 +33854,12 @@ const contact = ()=>{
                                 children: "Password"
                             }, void 0, false, {
                                 fileName: "src/components/contact.js",
-                                lineNumber: 69,
+                                lineNumber: 72,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                 fileName: "src/components/contact.js",
-                                lineNumber: 70,
+                                lineNumber: 73,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -33799,20 +33870,20 @@ const contact = ()=>{
                                 onChange: handleForm
                             }, void 0, false, {
                                 fileName: "src/components/contact.js",
-                                lineNumber: 71,
+                                lineNumber: 74,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/contact.js",
-                        lineNumber: 68,
+                        lineNumber: 71,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                         children: error.password
                     }, void 0, false, {
                         fileName: "src/components/contact.js",
-                        lineNumber: 73,
+                        lineNumber: 76,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -33820,31 +33891,31 @@ const contact = ()=>{
                             children: "Submit"
                         }, void 0, false, {
                             fileName: "src/components/contact.js",
-                            lineNumber: 75,
+                            lineNumber: 78,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/contact.js",
-                        lineNumber: 74,
+                        lineNumber: 77,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                         children: xyz
                     }, void 0, false, {
                         fileName: "src/components/contact.js",
-                        lineNumber: 77,
+                        lineNumber: 80,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/contact.js",
-                lineNumber: 55,
+                lineNumber: 58,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/contact.js",
-        lineNumber: 52,
+        lineNumber: 55,
         columnNumber: 10
     }, undefined);
 };
@@ -34038,7 +34109,298 @@ exports.default = profile;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8HMCN":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6uT56":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$7e8d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$7e8d.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _gamebox = require("./Gamebox");
+var _gameboxDefault = parcelHelpers.interopDefault(_gamebox);
+var _react = require("react");
+var _indexCss = require("./index.css");
+var _s = $RefreshSig$();
+const TicToe = ()=>{
+    _s();
+    const [state, setState] = (0, _react.useState)(Array(9).fill(null));
+    const [isXturn, setXturn] = (0, _react.useState)(true);
+    //  const ref1 = useRef();
+    const [abc, setAbc] = (0, _react.useState)("");
+    const HandleClick = (index)=>{
+        if (!state[index]) {
+            const copyState = [
+                ...state
+            ];
+            copyState[index] = isXturn ? "X" : "0";
+            setState(copyState);
+            setXturn(!isXturn);
+        }
+    };
+    const Winner = ()=>{
+        const arr = [
+            [
+                0,
+                1,
+                2
+            ],
+            [
+                3,
+                4,
+                5
+            ],
+            [
+                6,
+                7,
+                8
+            ],
+            [
+                0,
+                3,
+                6
+            ],
+            [
+                1,
+                4,
+                7
+            ],
+            [
+                2,
+                5,
+                8
+            ],
+            [
+                0,
+                4,
+                8
+            ],
+            [
+                2,
+                4,
+                6
+            ]
+        ];
+        for (let i of arr){
+            const [a, b, c] = i;
+            if (state[a] !== null && state[a] === state[b] && state[a] === state[c]) return state[a];
+        }
+        return false;
+    };
+    const iswin = Winner();
+    return iswin ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: [
+            iswin,
+            " ",
+            "  ",
+            "Winner"
+        ]
+    }, void 0, true, {
+        fileName: "src/components/TicToe.js",
+        lineNumber: 30,
+        columnNumber: 18
+    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "Board",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "row",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _gameboxDefault.default), {
+                        x: ()=>{
+                            HandleClick(0);
+                        },
+                        value: state[0]
+                    }, void 0, false, {
+                        fileName: "src/components/TicToe.js",
+                        lineNumber: 33,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _gameboxDefault.default), {
+                        x: ()=>{
+                            HandleClick(1);
+                        },
+                        value: state[1]
+                    }, void 0, false, {
+                        fileName: "src/components/TicToe.js",
+                        lineNumber: 36,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _gameboxDefault.default), {
+                        x: ()=>{
+                            HandleClick(2);
+                        },
+                        value: state[2]
+                    }, void 0, false, {
+                        fileName: "src/components/TicToe.js",
+                        lineNumber: 39,
+                        columnNumber: 17
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/TicToe.js",
+                lineNumber: 31,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "row",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _gameboxDefault.default), {
+                        x: ()=>{
+                            HandleClick(3);
+                        },
+                        value: state[3]
+                    }, void 0, false, {
+                        fileName: "src/components/TicToe.js",
+                        lineNumber: 44,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _gameboxDefault.default), {
+                        x: ()=>{
+                            HandleClick(4);
+                        },
+                        value: state[4]
+                    }, void 0, false, {
+                        fileName: "src/components/TicToe.js",
+                        lineNumber: 47,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _gameboxDefault.default), {
+                        x: ()=>{
+                            HandleClick(5);
+                        },
+                        value: state[5]
+                    }, void 0, false, {
+                        fileName: "src/components/TicToe.js",
+                        lineNumber: 50,
+                        columnNumber: 17
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/TicToe.js",
+                lineNumber: 43,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "row",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _gameboxDefault.default), {
+                        x: ()=>{
+                            HandleClick(6);
+                        },
+                        value: state[6]
+                    }, void 0, false, {
+                        fileName: "src/components/TicToe.js",
+                        lineNumber: 55,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _gameboxDefault.default), {
+                        x: ()=>{
+                            HandleClick(7);
+                        },
+                        value: state[7]
+                    }, void 0, false, {
+                        fileName: "src/components/TicToe.js",
+                        lineNumber: 58,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _gameboxDefault.default), {
+                        x: ()=>{
+                            HandleClick(8);
+                        },
+                        value: state[8]
+                    }, void 0, false, {
+                        fileName: "src/components/TicToe.js",
+                        lineNumber: 61,
+                        columnNumber: 17
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/TicToe.js",
+                lineNumber: 54,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                onClick: ()=>{
+                    setAbc("abcefghijkl");
+                },
+                children: "click here"
+            }, void 0, false, {
+                fileName: "src/components/TicToe.js",
+                lineNumber: 69,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                className: abc,
+                children: "Chemge the color "
+            }, void 0, false, {
+                fileName: "src/components/TicToe.js",
+                lineNumber: 74,
+                columnNumber: 10
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/TicToe.js",
+        lineNumber: 30,
+        columnNumber: 50
+    }, undefined);
+};
+_s(TicToe, "zfNGwDHdA4kUdMWnAb75gTVsCyc=");
+_c = TicToe;
+exports.default = TicToe;
+var _c;
+$RefreshReg$(_c, "TicToe");
+
+  $parcel$ReactRefreshHelpers$7e8d.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","./Gamebox":"4VD77","react":"21dqq","./index.css":"37xVP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4VD77":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8fea = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8fea.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Box = ({ x , value  })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        onClick: x,
+        style: {
+            border: "1px solid black",
+            height: "50px",
+            width: "50%",
+            display: "flex",
+            justifyContent: "center"
+        },
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+            children: value
+        }, void 0, false, {
+            fileName: "src/components/Gamebox.js",
+            lineNumber: 12,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/Gamebox.js",
+        lineNumber: 5,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Box;
+exports.default = Box;
+var _c;
+$RefreshReg$(_c, "Box");
+
+  $parcel$ReactRefreshHelpers$8fea.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"37xVP":[function() {},{}],"8HMCN":[function(require,module,exports) {
 module.exports = require("c31d3cc0e2de324b")(require("710991af0d7c9614").getBundleURL("lPpKD") + "Instamart.0762395e.js" + "?" + Date.now()).catch((err)=>{
     delete module.bundle.cache[module.id];
     throw err;
@@ -34141,274 +34503,6 @@ exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
-},{}],"6uT56":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$7e8d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$7e8d.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _gamebox = require("./Gamebox");
-var _gameboxDefault = parcelHelpers.interopDefault(_gamebox);
-var _react = require("react");
-var _s = $RefreshSig$();
-const TicToe = ()=>{
-    _s();
-    const [state, setState] = (0, _react.useState)(Array(9).fill(null));
-    const [isXturn, setXturn] = (0, _react.useState)(true);
-    const HandleClick = (index)=>{
-        const copyState = [
-            ...state
-        ];
-        copyState[index] = isXturn ? "X" : "0";
-        setState(copyState);
-        setXturn(!isXturn);
-    };
-    const Winner = ()=>{
-        const arr = [
-            [
-                0,
-                1,
-                2
-            ],
-            [
-                3,
-                4,
-                5
-            ],
-            [
-                6,
-                7,
-                8
-            ],
-            [
-                0,
-                3,
-                6
-            ],
-            [
-                1,
-                4,
-                7
-            ],
-            [
-                2,
-                5,
-                8
-            ],
-            [
-                0,
-                4,
-                8
-            ],
-            [
-                2,
-                4,
-                6
-            ]
-        ];
-        for (let i of arr){
-            const [a, b, c] = i;
-            if (state[a] !== null && state[a] === state[b] && state[a] === state[c]) return state[a];
-        }
-        return false;
-    };
-    const iswin = Winner();
-    return iswin ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: [
-            iswin,
-            " ",
-            "  ",
-            "Winner"
-        ]
-    }, void 0, true, {
-        fileName: "src/components/TicToe.js",
-        lineNumber: 23,
-        columnNumber: 18
-    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "Board",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "row",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _gameboxDefault.default), {
-                        x: ()=>{
-                            HandleClick(0);
-                        },
-                        value: state[0]
-                    }, void 0, false, {
-                        fileName: "src/components/TicToe.js",
-                        lineNumber: 26,
-                        columnNumber: 17
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _gameboxDefault.default), {
-                        x: ()=>{
-                            HandleClick(1);
-                        },
-                        value: state[1]
-                    }, void 0, false, {
-                        fileName: "src/components/TicToe.js",
-                        lineNumber: 29,
-                        columnNumber: 17
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _gameboxDefault.default), {
-                        x: ()=>{
-                            HandleClick(2);
-                        },
-                        value: state[2]
-                    }, void 0, false, {
-                        fileName: "src/components/TicToe.js",
-                        lineNumber: 32,
-                        columnNumber: 17
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/TicToe.js",
-                lineNumber: 24,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "row",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _gameboxDefault.default), {
-                        x: ()=>{
-                            HandleClick(3);
-                        },
-                        value: state[3]
-                    }, void 0, false, {
-                        fileName: "src/components/TicToe.js",
-                        lineNumber: 37,
-                        columnNumber: 17
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _gameboxDefault.default), {
-                        x: ()=>{
-                            HandleClick(4);
-                        },
-                        value: state[4]
-                    }, void 0, false, {
-                        fileName: "src/components/TicToe.js",
-                        lineNumber: 40,
-                        columnNumber: 17
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _gameboxDefault.default), {
-                        x: ()=>{
-                            HandleClick(5);
-                        },
-                        value: state[5]
-                    }, void 0, false, {
-                        fileName: "src/components/TicToe.js",
-                        lineNumber: 43,
-                        columnNumber: 17
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/TicToe.js",
-                lineNumber: 36,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "row",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _gameboxDefault.default), {
-                        x: ()=>{
-                            HandleClick(6);
-                        },
-                        value: state[6]
-                    }, void 0, false, {
-                        fileName: "src/components/TicToe.js",
-                        lineNumber: 48,
-                        columnNumber: 17
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _gameboxDefault.default), {
-                        x: ()=>{
-                            HandleClick(7);
-                        },
-                        value: state[7]
-                    }, void 0, false, {
-                        fileName: "src/components/TicToe.js",
-                        lineNumber: 51,
-                        columnNumber: 17
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _gameboxDefault.default), {
-                        x: ()=>{
-                            HandleClick(8);
-                        },
-                        value: state[8]
-                    }, void 0, false, {
-                        fileName: "src/components/TicToe.js",
-                        lineNumber: 54,
-                        columnNumber: 17
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/TicToe.js",
-                lineNumber: 47,
-                columnNumber: 13
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/TicToe.js",
-        lineNumber: 23,
-        columnNumber: 50
-    }, undefined);
-};
-_s(TicToe, "axUY0xHZOohYMd13K5lvV+mDp48=");
-_c = TicToe;
-exports.default = TicToe;
-var _c;
-$RefreshReg$(_c, "TicToe");
-
-  $parcel$ReactRefreshHelpers$7e8d.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","./Gamebox":"4VD77","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}],"4VD77":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$8fea = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$8fea.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Box = ({ x , value  })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        onClick: x,
-        style: {
-            border: "1px solid black",
-            height: "50px",
-            width: "50%",
-            display: "flex",
-            justifyContent: "center"
-        },
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-            children: value
-        }, void 0, false, {
-            fileName: "src/components/Gamebox.js",
-            lineNumber: 12,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/Gamebox.js",
-        lineNumber: 5,
-        columnNumber: 10
-    }, undefined);
-};
-_c = Box;
-exports.default = Box;
-var _c;
-$RefreshReg$(_c, "Box");
-
-  $parcel$ReactRefreshHelpers$8fea.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["hklly","1xC6H","bNKaB"], "bNKaB", "parcelRequiredd69")
+},{}]},["hklly","1xC6H","bNKaB"], "bNKaB", "parcelRequiredd69")
 
 //# sourceMappingURL=index.0641b553.js.map

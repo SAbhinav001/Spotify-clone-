@@ -1,23 +1,24 @@
 import { RestaurantList } from "../constant";
 import RestrauntCard from "./RestaurantCard";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Shimmer from "./shimmer";
 import { Link } from "react-router-dom";
 import { filterData } from "../utils/helper";
-import useOnline from "../utils/useOnline"
+import useOnline from "../utils/useOnline";
+import userContext from "../utils/userContext";
 
 const Body = () => {
   const [filterRestaurants, setFilterRestaurants] = useState([]);
   const [allRestaurants, setAllRestaurants] = useState([]);
-  const [searchInput, setSearchInput] = useState("");
-  const isOnline =  useOnline();
+  const [searchInput, setSearchInput] = useState(" ");
+  const isOnline = useOnline();
+
+  const { user1, setuser } = useContext(userContext);
 
   useEffect(() => {
     //API call withoput dependcy so it use useffect only once after render
     getRestaurant();
-
-  },[]);
-  
+  }, []);
 
   async function getRestaurant() {
     const data = await fetch(
@@ -37,7 +38,6 @@ const Body = () => {
   // if(!isOnline){
   //   return  <h1>OOPS! Seems like  you are OFFLINE</h1>
   // }
-
 
   return allRestaurants.length === 0 ? (
     <Shimmer />
@@ -62,13 +62,18 @@ const Body = () => {
         >
           Search
         </button>
+        <input
+          type="text"
+          value={user1.name}
+          onChange={(e) => setuser({ ...user1, name: e.target.value })}
+        />
       </div>
 
       <div className="Restraunt-list">
         {filterRestaurants.length ? (
           filterRestaurants.map((EachObj) => {
             return (
-              <Link to={"/ResMenu/" + EachObj.data.id} key={EachObj.data.id} >
+              <Link to={"/ResMenu/" + EachObj.data.id} key={EachObj.data.id}>
                 <RestrauntCard {...EachObj.data} />
               </Link>
             );
