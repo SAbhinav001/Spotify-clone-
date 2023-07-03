@@ -1,11 +1,16 @@
 import { useContext } from "react";
-import userContext from "../utils/userContext"
+import {users} from "../utils/userContext"
 
 
 const Footer = () => {
-    const { user1} = useContext(userContext)
+   const {user} = useContext(users);
     return(
-    <h3>{user1.name} + {user1.email}</h3>
+       
+      <div>
+        <h2>{user.name}</h2>
+        <h2>footer</h2>
+        </div>  
+    
     )}
 
 export default Footer;

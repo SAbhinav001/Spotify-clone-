@@ -2972,7 +2972,6 @@ var _shimmerJsDefault = parcelHelpers.interopDefault(_shimmerJs);
 var _ticToeJs = require("./components/TicToe.js");
 var _ticToeJsDefault = parcelHelpers.interopDefault(_ticToeJs);
 var _userContextJs = require("./utils/userContext.js");
-var _userContextJsDefault = parcelHelpers.interopDefault(_userContextJs);
 var _s = $RefreshSig$();
 const InstaMart = /*#__PURE__*/ (0, _react.lazy)(()=>require("b162e82d332fbfaa"));
 _c = InstaMart;
@@ -2986,41 +2985,37 @@ const AppLayout = ()=>{
         lineNumber: 22,
         columnNumber: 12
     }, undefined);
-    const [user, setUser] = (0, _react.useState)({
-        name: "abhinav",
-        email: "dummy@gmial.com"
-    });
+    // const [user, setUser] = useState({
+    //   name:"abhinav",
+    //   email:"dummy@gmial.com"
+    // })
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userContextJsDefault.default).Provider, {
-            value: {
-                user1: user,
-                setuser: setUser
-            },
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userContextJs.UserContext), {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerJsDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 33,
+                    lineNumber: 36,
                     columnNumber: 6
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 35,
+                    lineNumber: 38,
                     columnNumber: 7
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerJsDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 36,
+                    lineNumber: 40,
                     columnNumber: 7
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/app.js",
-            lineNumber: 29,
+            lineNumber: 35,
             columnNumber: 5
         }, undefined)
     }, void 0, false);
 };
-_s(AppLayout, "P/npvi/UEdXZHUQeTP7NsjDarJ4=", false, function() {
+_s(AppLayout, "XQZuNqwLTT5c423yVrgGXkXVqoc=", false, function() {
     return [
         (0, _useOnlineDefault.default)
     ];
@@ -3031,12 +3026,12 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
             fileName: "src/app.js",
-            lineNumber: 42,
+            lineNumber: 47,
             columnNumber: 12
         }, undefined),
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _erorJsDefault.default), {}, void 0, false, {
             fileName: "src/app.js",
-            lineNumber: 43,
+            lineNumber: 48,
             columnNumber: 17
         }, undefined),
         children: [
@@ -3044,7 +3039,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyJsDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 46,
+                    lineNumber: 51,
                     columnNumber: 14
                 }, undefined)
             },
@@ -3052,7 +3047,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/about",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutJsDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 49,
+                    lineNumber: 54,
                     columnNumber: 14
                 }, undefined)
             },
@@ -3060,7 +3055,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/about/profile",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileJsDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 58,
+                    lineNumber: 63,
                     columnNumber: 14
                 }, undefined)
             },
@@ -3068,7 +3063,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/Contact",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactJsDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 61,
+                    lineNumber: 66,
                     columnNumber: 14
                 }, undefined)
             },
@@ -3076,7 +3071,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/ResMenu/:id",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resMenuJsDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 64,
+                    lineNumber: 69,
                     columnNumber: 14
                 }, undefined)
             },
@@ -3086,12 +3081,12 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                     fallback: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerJsDefault.default), {}, void 0, false, void 0, void 0),
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(InstaMart, {}, void 0, false, {
                         fileName: "src/app.js",
-                        lineNumber: 67,
+                        lineNumber: 72,
                         columnNumber: 47
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 67,
+                    lineNumber: 72,
                     columnNumber: 14
                 }, undefined)
             },
@@ -3099,7 +3094,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/game",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ticToeJsDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 70,
+                    lineNumber: 75,
                     columnNumber: 14
                 }, undefined)
             }
@@ -3111,7 +3106,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appRouter
 }, void 0, false, {
     fileName: "src/app.js",
-    lineNumber: 74,
+    lineNumber: 79,
     columnNumber: 13
 }, undefined));
 var _c, _c1;
@@ -33156,7 +33151,6 @@ var _helper = require("../utils/helper");
 var _useOnline = require("../utils/useOnline");
 var _useOnlineDefault = parcelHelpers.interopDefault(_useOnline);
 var _userContext = require("../utils/userContext");
-var _userContextDefault = parcelHelpers.interopDefault(_userContext);
 var _s = $RefreshSig$();
 const Body = ()=>{
     _s();
@@ -33164,7 +33158,7 @@ const Body = ()=>{
     const [allRestaurants, setAllRestaurants] = (0, _react.useState)([]);
     const [searchInput, setSearchInput] = (0, _react.useState)(" ");
     const isOnline = (0, _useOnlineDefault.default)();
-    const { user1 , setuser  } = (0, _react.useContext)((0, _userContextDefault.default));
+    const { user , setUser  } = (0, _react.useContext)((0, _userContext.users));
     (0, _react.useEffect)(()=>{
         //API call withoput dependcy so it use useffect only once after render
         getRestaurant();
@@ -33219,9 +33213,9 @@ const Body = ()=>{
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                         type: "text",
-                        value: user1.name,
-                        onChange: (e)=>setuser({
-                                ...user1,
+                        value: user.name,
+                        onChange: (e)=>setUser({
+                                ...user,
                                 name: e.target.value
                             })
                     }, void 0, false, {
@@ -33267,7 +33261,7 @@ const Body = ()=>{
         ]
     }, void 0, true);
 };
-_s(Body, "MPiYY7UThnXzsIPRk70iyvH+E08=", false, function() {
+_s(Body, "rCqQIy2mxTIPsHrEAYWpb+EFa5I=", false, function() {
     return [
         (0, _useOnlineDefault.default)
     ];
@@ -33510,23 +33504,41 @@ $parcel$ReactRefreshHelpers$268f.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "users", ()=>users);
+parcelHelpers.export(exports, "UserContext", ()=>UserContext);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
-const users = /*#__PURE__*/ (0, _react.createContext)({
-    user1: {
-        name: "dummy",
-        email: "dummy@gmail.,com"
-    }
-});
-//for debugging
-users.displayName = "userContext";
-exports.default = users;
+var _s = $RefreshSig$();
+const users = /*#__PURE__*/ (0, _react.createContext)();
+const UserContext = (props)=>{
+    _s();
+    const [user, setUser] = (0, _react.useState)({
+        name: "abhinav",
+        email: "dummy@gmial.com"
+    });
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(users.Provider, {
+        value: {
+            user: user,
+            setUser: setUser
+        },
+        children: props.children
+    }, void 0, false, {
+        fileName: "src/utils/userContext.js",
+        lineNumber: 9,
+        columnNumber: 10
+    }, undefined);
+};
+_s(UserContext, "tlsVMlcpSbWOXT7ues1yOm3Pb30=");
+_c = UserContext;
+var _c;
+$RefreshReg$(_c, "UserContext");
 
   $parcel$ReactRefreshHelpers$268f.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8pPOA":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8pPOA":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -33538,16 +33550,26 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _userContext = require("../utils/userContext");
-var _userContextDefault = parcelHelpers.interopDefault(_userContext);
 var _s = $RefreshSig$();
 const Footer = ()=>{
     _s();
-    const { user1  } = (0, _react.useContext)((0, _userContextDefault.default));
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+    const { user  } = (0, _react.useContext)((0, _userContext.users));
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
-            user1.name,
-            " + ",
-            user1.email
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: user.name
+            }, void 0, false, {
+                fileName: "src/components/Footer.js",
+                lineNumber: 8,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: "footer"
+            }, void 0, false, {
+                fileName: "src/components/Footer.js",
+                lineNumber: 9,
+                columnNumber: 9
+            }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Footer.js",
@@ -33555,7 +33577,7 @@ const Footer = ()=>{
         columnNumber: 10
     }, undefined);
 };
-_s(Footer, "iQiTYzViNN2dFAJ2ZtzZpWmkLyA=");
+_s(Footer, "fV01W0EFhpxcsxwq9eE2kaSNZKA=");
 _c = Footer;
 exports.default = Footer;
 var _c;
@@ -33720,6 +33742,7 @@ const contact = ()=>{
     const [error, setError] = (0, _react.useState)({});
     const [isValid, setValid] = (0, _react.useState)(false);
     const [xyz, setXyx] = (0, _react.useState)("");
+    const [isCheck, setCheck] = (0, _react.useState)(false);
     const handleForm = (e)=>{
         const { name , value  } = e.target;
         const nCred = {
@@ -33759,14 +33782,14 @@ const contact = ()=>{
                 children: "contact US"
             }, void 0, false, {
                 fileName: "src/components/contact.js",
-                lineNumber: 56,
+                lineNumber: 57,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("pre", {
                 children: JSON.stringify(Ncredentials, undefined, 2)
             }, void 0, false, {
                 fileName: "src/components/contact.js",
-                lineNumber: 57,
+                lineNumber: 58,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
@@ -33778,12 +33801,12 @@ const contact = ()=>{
                                 children: "Username"
                             }, void 0, false, {
                                 fileName: "src/components/contact.js",
-                                lineNumber: 60,
+                                lineNumber: 61,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                 fileName: "src/components/contact.js",
-                                lineNumber: 61,
+                                lineNumber: 62,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -33794,20 +33817,20 @@ const contact = ()=>{
                                 onChange: handleForm
                             }, void 0, false, {
                                 fileName: "src/components/contact.js",
-                                lineNumber: 62,
+                                lineNumber: 63,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/contact.js",
-                        lineNumber: 59,
+                        lineNumber: 60,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                         children: error.username
                     }, void 0, false, {
                         fileName: "src/components/contact.js",
-                        lineNumber: 64,
+                        lineNumber: 65,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -33816,12 +33839,12 @@ const contact = ()=>{
                                 children: "Email"
                             }, void 0, false, {
                                 fileName: "src/components/contact.js",
-                                lineNumber: 66,
+                                lineNumber: 67,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                 fileName: "src/components/contact.js",
-                                lineNumber: 67,
+                                lineNumber: 68,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -33832,20 +33855,20 @@ const contact = ()=>{
                                 onChange: handleForm
                             }, void 0, false, {
                                 fileName: "src/components/contact.js",
-                                lineNumber: 68,
+                                lineNumber: 69,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/contact.js",
-                        lineNumber: 65,
+                        lineNumber: 66,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                         children: error.email
                     }, void 0, false, {
                         fileName: "src/components/contact.js",
-                        lineNumber: 70,
+                        lineNumber: 71,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -33854,36 +33877,54 @@ const contact = ()=>{
                                 children: "Password"
                             }, void 0, false, {
                                 fileName: "src/components/contact.js",
-                                lineNumber: 72,
+                                lineNumber: 73,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                 fileName: "src/components/contact.js",
-                                lineNumber: 73,
+                                lineNumber: 74,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                type: "password",
+                                type: isCheck ? "text" : "password",
                                 placeholder: "Password",
                                 name: "password",
                                 value: Ncredentials.password,
                                 onChange: handleForm
                             }, void 0, false, {
                                 fileName: "src/components/contact.js",
-                                lineNumber: 74,
+                                lineNumber: 75,
                                 columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                children: [
+                                    "  ",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                        type: "checkbox",
+                                        onClick: ()=>setCheck(!isCheck)
+                                    }, void 0, false, {
+                                        fileName: "src/components/contact.js",
+                                        lineNumber: 77,
+                                        columnNumber: 18
+                                    }, undefined),
+                                    "Click here"
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/contact.js",
+                                lineNumber: 77,
+                                columnNumber: 9
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/contact.js",
-                        lineNumber: 71,
+                        lineNumber: 72,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                         children: error.password
                     }, void 0, false, {
                         fileName: "src/components/contact.js",
-                        lineNumber: 76,
+                        lineNumber: 79,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -33891,35 +33932,35 @@ const contact = ()=>{
                             children: "Submit"
                         }, void 0, false, {
                             fileName: "src/components/contact.js",
-                            lineNumber: 78,
+                            lineNumber: 81,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/contact.js",
-                        lineNumber: 77,
+                        lineNumber: 80,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                         children: xyz
                     }, void 0, false, {
                         fileName: "src/components/contact.js",
-                        lineNumber: 80,
+                        lineNumber: 83,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/contact.js",
-                lineNumber: 58,
+                lineNumber: 59,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/contact.js",
-        lineNumber: 55,
+        lineNumber: 56,
         columnNumber: 10
     }, undefined);
 };
-_s(contact, "YXVavDZMCa5XjhfaiFPC3dhdDv8=");
+_s(contact, "onF29SjR7On2DlwiPX/bmX2AY80=");
 exports.default = contact;
 
   $parcel$ReactRefreshHelpers$c69a.postlude(module);

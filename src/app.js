@@ -14,7 +14,7 @@ import Profile from "./components/profile.js"
 import useOnline from "./utils/useOnline"
 import Shimmer from "./components/shimmer.js"
 import Game from "./components/TicToe.js";
-import userContext from "./utils/userContext.js"
+import {UserContext} from "./utils/userContext.js"
 
 
 const InstaMart = lazy(() => import("./components/Instamart.js"))
@@ -27,22 +27,25 @@ const AppLayout = () => {
     return  <h1>OOPS! Seems like  you are OFFLINE</h1>
   }
 
-  const [user, setUser] = useState({
-    name:"abhinav",
-    email:"dummy@gmial.com"
-  })
+  // const [user, setUser] = useState({
+  //   name:"abhinav",
+  //   email:"dummy@gmial.com"
+  // })
 
   return (
     <>
-    <userContext.Provider value={{
+    {/* <userContext.Provider value={{
       user1:user,
       setuser :setUser,
-    }}>
+    }}> */}
+    <UserContext>
      <Header />
       {/* <Body /> */}
       <Outlet />
+     
       <Footer />
-    </userContext.Provider>
+      </UserContext>
+    
   </>
   );
 };

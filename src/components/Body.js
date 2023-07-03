@@ -5,7 +5,7 @@ import Shimmer from "./shimmer";
 import { Link } from "react-router-dom";
 import { filterData } from "../utils/helper";
 import useOnline from "../utils/useOnline";
-import userContext from "../utils/userContext";
+import {users} from "../utils/userContext";
 
 const Body = () => {
   const [filterRestaurants, setFilterRestaurants] = useState([]);
@@ -13,7 +13,7 @@ const Body = () => {
   const [searchInput, setSearchInput] = useState(" ");
   const isOnline = useOnline();
 
-  const { user1, setuser } = useContext(userContext);
+   const {user, setUser}= useContext(users);
 
   useEffect(() => {
     //API call withoput dependcy so it use useffect only once after render
@@ -64,8 +64,8 @@ const Body = () => {
         </button>
         <input
           type="text"
-          value={user1.name}
-          onChange={(e) => setuser({ ...user1, name: e.target.value })}
+          value={user.name}
+          onChange={(e) => setUser({ ...user, name: e.target.value })}
         />
       </div>
 

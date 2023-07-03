@@ -6,6 +6,7 @@ const contact = () => {
   const [error, setError] = useState({});
   const [isValid, setValid] = useState(false)
   const[xyz, setXyx] = useState("");
+  const[isCheck, setCheck] = useState(false)
 
   const handleForm = (e) => {
     const { name, value } = e.target;
@@ -84,12 +85,14 @@ useEffect(()=>{
           <label>Password</label>
           <br />
           <input
-            type="password"
+            type={isCheck ? "text" : "password"}
             placeholder="Password"
             name="password"
             value={Ncredentials.password}
             onChange={handleForm}
           />
+          
+        <label>  <input type="checkbox" onClick={()=> setCheck(!isCheck)} />Click here</label>
         </div>
         <h2>{error.password}</h2>
         <div>

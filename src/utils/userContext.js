@@ -1,14 +1,21 @@
 import { createContext } from "react";
+import { useState } from "react";
 
-const users = createContext({
-    user1:{
-        name:"dummy",
-        email:"dummy@gmail.,com"
-    }
-})
+export const users = createContext();
 
-//for debugging
+export const UserContext = (props) => {
 
-users.displayName ="userContext"
+  const [user, setUser] = useState({
+    name: "abhinav",
+    email: "dummy@gmial.com",
+  });
 
-export default users;
+  return (
+    <users.Provider value={{
+        user:user,
+        setUser:setUser,
+    }}>
+    {props.children}
+    </users.Provider>
+  )
+};
