@@ -67,6 +67,7 @@ const Body = () => {
           value={user.name}
           onChange={(e) => setUser({ ...user, name: e.target.value })}
         />
+        <h1>{searchInput}</h1>
       </div>
 
       <div className="Restraunt-list">

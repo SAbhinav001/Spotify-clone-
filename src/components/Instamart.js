@@ -1,7 +1,11 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import store from "../utils/store";
 
 
 const Element = ({ title, discription , isVisible, setIsVisisble}) => {
+
+  
 
   //const [isVisible, setIsVisisble] = useState(false);
 
@@ -70,6 +74,8 @@ const Element = ({ title, discription , isVisible, setIsVisisble}) => {
 
 const Instamart = () => {
 
+  const cardItems = useSelector((store) => store.cart.itmes)
+
   
     const [config, setConfig] = useState(null)
     const setFun = (xyz)=> setConfig(xyz)
@@ -103,6 +109,10 @@ const Instamart = () => {
        // setIsVisisble={(xyz)=>setConfig(xyz)}
        setIsVisisble={setFun}
       />
+
+      <div>
+        {cardItems.map((obj)=> <h1>{obj}</h1>)}
+      </div>
 
     
     </div>

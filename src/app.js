@@ -15,6 +15,8 @@ import useOnline from "./utils/useOnline"
 import Shimmer from "./components/shimmer.js"
 import Game from "./components/TicToe.js";
 import {UserContext} from "./utils/userContext.js"
+import store from "./utils/store.js"
+import { Provider } from "react-redux";
 
 
 const InstaMart = lazy(() => import("./components/Instamart.js"))
@@ -38,6 +40,7 @@ const AppLayout = () => {
       user1:user,
       setuser :setUser,
     }}> */}
+    <Provider store={store}>
     <UserContext>
      <Header />
       {/* <Body /> */}
@@ -45,6 +48,7 @@ const AppLayout = () => {
      
       <Footer />
       </UserContext>
+      </Provider>
     
   </>
   );

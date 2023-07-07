@@ -3,6 +3,8 @@ import { CDN_IMG_URL } from "../constant";
 import { useEffect, useState } from "react";
 import Shimmer from "./shimmer";
 import useRestaurant from "../utils/useRestaurant"
+import { useDispatch } from "react-redux";
+import { addItmes } from "../utils/cartSlice";
 
 const ResMenu = () => {
   const data = useParams();
@@ -11,6 +13,11 @@ const ResMenu = () => {
   //
 
   const [Startingmenu , Mainmenu] =  useRestaurant(id)
+
+  const dispatch = useDispatch();
+  const handleAdd = (name) => {
+    dispatch(addItmes(name))
+  }
   
 
   //we can use only one usestae , i just made this for my ease
@@ -34,9 +41,16 @@ const ResMenu = () => {
         <h1>Main Menu</h1>
         <ul>
           { Mainmenu.map((obj) => {
-            return <li key={obj.card.info.id}>{obj?.card?.info?.name}</li>;
+            return(
+              <div style={{display:"flex"}}>
+                <li key={obj.card.info.id}>{obj?.card?.info?.name}</li>
+              <button onClick={() => handleAdd(obj?.card?.info?.name)}>Clik here to add</button>
+              </div>
+            )
           })}
+          
         </ul>
+       
       </div>
     </div>
   );

@@ -605,6 +605,9 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
+var _reactRedux = require("react-redux");
+var _store = require("../utils/store");
+var _storeDefault = parcelHelpers.interopDefault(_store);
 var _s = $RefreshSig$();
 const Element = ({ title , discription , isVisible , setIsVisisble  })=>{
     //const [isVisible, setIsVisisble] = useState(false);
@@ -619,7 +622,7 @@ const Element = ({ title , discription , isVisible , setIsVisisble  })=>{
                 children: title
             }, void 0, false, {
                 fileName: "src/components/Instamart.js",
-                lineNumber: 15,
+                lineNumber: 17,
                 columnNumber: 7
             }, undefined),
             isVisible ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -627,27 +630,27 @@ const Element = ({ title , discription , isVisible , setIsVisisble  })=>{
                 children: "Hide"
             }, void 0, false, {
                 fileName: "src/components/Instamart.js",
-                lineNumber: 16,
+                lineNumber: 18,
                 columnNumber: 20
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                 onClick: ()=>setIsVisisble(title),
                 children: "Show"
             }, void 0, false, {
                 fileName: "src/components/Instamart.js",
-                lineNumber: 16,
+                lineNumber: 18,
                 columnNumber: 78
             }, undefined),
             isVisible && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: discription
             }, void 0, false, {
                 fileName: "src/components/Instamart.js",
-                lineNumber: 18,
+                lineNumber: 20,
                 columnNumber: 21
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Instamart.js",
-        lineNumber: 10,
+        lineNumber: 12,
         columnNumber: 10
     }, undefined);
 };
@@ -701,6 +704,7 @@ _c = Element;
 // };
 const Instamart = ()=>{
     _s();
+    const cardItems = (0, _reactRedux.useSelector)((store)=>store.cart.itmes);
     const [config, setConfig] = (0, _react.useState)(null);
     const setFun = (xyz)=>setConfig(xyz);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -713,7 +717,7 @@ const Instamart = ()=>{
                 setIsVisisble: setFun
             }, void 0, false, {
                 fileName: "src/components/Instamart.js",
-                lineNumber: 75,
+                lineNumber: 78,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Element, {
@@ -724,7 +728,7 @@ const Instamart = ()=>{
                 setIsVisisble: setFun
             }, void 0, false, {
                 fileName: "src/components/Instamart.js",
-                lineNumber: 78,
+                lineNumber: 81,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Element, {
@@ -735,17 +739,34 @@ const Instamart = ()=>{
                 setIsVisisble: setFun
             }, void 0, false, {
                 fileName: "src/components/Instamart.js",
-                lineNumber: 81,
+                lineNumber: 84,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: cardItems.map((obj)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        children: obj
+                    }, void 0, false, {
+                        fileName: "src/components/Instamart.js",
+                        lineNumber: 89,
+                        columnNumber: 31
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "src/components/Instamart.js",
+                lineNumber: 88,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Instamart.js",
-        lineNumber: 74,
+        lineNumber: 77,
         columnNumber: 10
     }, undefined);
 };
-_s(Instamart, "WxO3KVVv2sW+8mlg6BBZXEYaln4=");
+_s(Instamart, "gmSYBx80skm673mkZ3qxJmwmZjQ=", false, function() {
+    return [
+        (0, _reactRedux.useSelector)
+    ];
+});
 _c1 = Instamart;
 exports.default = Instamart;
 var _c, _c1;
@@ -757,6 +778,6 @@ $RefreshReg$(_c1, "Instamart");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["gzT0l","1xC6H"], null, "parcelRequiredd69")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-redux":"bdVon","../utils/store":"k2jPV"}]},["gzT0l","1xC6H"], null, "parcelRequiredd69")
 
 //# sourceMappingURL=Instamart.0762395e.js.map

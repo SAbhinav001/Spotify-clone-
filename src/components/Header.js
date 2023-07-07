@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux"
 
 const Title = () => (
+
+ 
+
   <a href="/">
     <img
       className="logo"
@@ -12,17 +16,17 @@ const Title = () => (
 
 const Header = () => {
 
-
+  const cardItems = useSelector((store) => store.cart.itmes)
   return (
     <div className="header">
       <Title />
       <div className="nav-items">
         <ul>
-          <Link to = "/"><li>Home</li></Link>
-          <Link to = "/about"><li>About Us</li></Link>
-          <Link to = "Contact"><li>Contact</li></Link>
-          <Link to ="Instamart">InstaMart</Link>
-          <Link to ="Game">Game</Link>
+          <Link to = "/"><li style={{padding: "10px", margin:"10px"}}>Home</li></Link>
+          <Link to = "/about"><li style={{padding: "10px", margin:"10px"}} >About Us</li></Link>
+          <Link to = "Contact"><li style={{padding: "10px", margin:"10px"}}>Contact</li></Link>
+          <Link to ="Instamart"><li style={{padding: "10px", margin:"10px"}}>InstaMart  {cardItems.length} items</li></Link>
+          <Link to ="Game"><li style={{padding: "10px", margin:"10px"}}>Game</li></Link>
         </ul>
       </div>
     </div>
