@@ -39,9 +39,7 @@ const Body = () => {
   //   return  <h1>OOPS! Seems like  you are OFFLINE</h1>
   // }
 
-  return allRestaurants.length === 0 ? (
-    <Shimmer />
-  ) : (
+  return   (
     <>
       <div className="search-constainer">
         <input
