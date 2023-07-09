@@ -15,6 +15,7 @@ const ResMenu = () => {
   const [Startingmenu , Mainmenu] =  useRestaurant(id)
 
   const dispatch = useDispatch();
+  
   const handleAdd = (name) => {
     dispatch(addItmes(name))
   }
